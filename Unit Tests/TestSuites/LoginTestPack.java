@@ -23,7 +23,7 @@ public class LoginTestPack
     {
         ApplicationConfig appConfig = new ApplicationConfig();
         
-        instance.currentEnvironment = Enums.Environment.INTDP;  
+        instance.currentEnvironment = Enums.Environment.INT;  
     }
      
     @Test
