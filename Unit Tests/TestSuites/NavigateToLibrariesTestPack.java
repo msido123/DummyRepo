@@ -13,13 +13,13 @@ import org.junit.Test;
 
 /**
  *
- * @author MsimeleloG
+ * @author fnell
  */
-public class Navigate_to_TemplateTestPack 
+public class NavigateToLibrariesTestPack 
 {
     static TestMarshall instance; 
     
-     public Navigate_to_TemplateTestPack()
+     public NavigateToLibrariesTestPack()
     {
         ApplicationConfig appConfig = new ApplicationConfig();
         
@@ -27,26 +27,26 @@ public class Navigate_to_TemplateTestPack
     }
      
     @Test
-    public void RunMixTelematicsNavigate_to_TemplateTestPackIE() throws FileNotFoundException
+    public void RunMixTelematicsNavigateToLibrariesTestPackIE() throws FileNotFoundException
     {
         System.out.println("Mix Telematics Test Pack");   
-        instance = new TestMarshall("TestPacks\\Navigate_to_TemplateTestPack.xls", Enums.BrowserType.IE);
+        instance = new TestMarshall("TestPacks\\NavigateToLibrariesTestPack.xls", Enums.BrowserType.IE);
         instance.runKeywordDrivenTests();
     }
  
     @Test
-    public void RunMixTelematicsNavigate_to_TemplateTestPackChrome() throws FileNotFoundException
+    public void RunMixTelematicsNavigateToLibrariesTestPackChrome() throws FileNotFoundException
     {
         System.out.println("Mix Telematics Test Pack");   
-        instance = new TestMarshall("TestPacks\\Navigate_to_TemplateTestPack.xlsx", Enums.BrowserType.Chrome);
+        instance = new TestMarshall("TestPacks\\NavigateToLibrariesTestPack.xlsx", Enums.BrowserType.Chrome);
         instance.runKeywordDrivenTests();
     }
     
     @Test
-    public void RunMixTelematicsNavigate_to_TemplateTestPackFireFox() throws FileNotFoundException
+    public void RunMixTelematicsNavigateToLibrariesTestPackFireFox() throws FileNotFoundException
     {
         System.out.println("Mix Telematics Test Pack");   
-        instance = new TestMarshall("TestPacks\\Navigate_to_TemplateTestPack.xls", Enums.BrowserType.FireFox);
+        instance = new TestMarshall("TestPacks\\NavigateToLibrariesTestPack.xls", Enums.BrowserType.FireFox);
         instance.runKeywordDrivenTests();
     }
     

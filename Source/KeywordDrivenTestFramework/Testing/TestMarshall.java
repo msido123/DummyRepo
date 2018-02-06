@@ -29,6 +29,7 @@ import KeywordDrivenTestFramework.Testing.TestClasses.Utilities.SelectBreadcrum;
 import KeywordDrivenTestFramework.Testing.TestClasses.Utilities.SelectDriver;
 import KeywordDrivenTestFramework.Testing.TestClasses.Login.Login_to_MixTelematicsEU;
 import KeywordDrivenTestFramework.Testing.TestClasses.Login.Navigate;
+import KeywordDrivenTestFramework.ConfigAdmin.NavigateToLibraries;
 import KeywordDrivenTestFramework.ConfigAdmin.Navigate_to_Templates;
 
 
@@ -182,7 +183,7 @@ public class TestMarshall extends BaseClass
                                 break;
                             }
                             
-                            case "NavigateToLibraries":
+                            case "NavigateToTemplates":
                             {
                                 Navigate_to_Templates navigateToTemplate = new Navigate_to_Templates(testData);
                                 reportGenerator.addResult(navigateToTemplate.executeTest());
@@ -205,7 +206,6 @@ public class TestMarshall extends BaseClass
                                 numberOfTest++;
                                 break;
                             }
-                            
                             case "SkipCPT":
                             {
                                 if(currentEnvironment==CPT)

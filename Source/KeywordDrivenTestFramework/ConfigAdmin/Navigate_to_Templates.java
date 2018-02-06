@@ -30,7 +30,42 @@ public class Navigate_to_Templates extends BaseClass {
     public TestResult executeTest() throws InterruptedException {
         this.setStartTime();
         
-        return new TestResult(testData, Enums.ResultStatus.PASS, "Successfully navigated to mix.", this.getTotalExecutionTime());
+        if(!NavigateToManageTab()) {
+            SeleniumDriverInstance.takeScreenShot(counter + " - Failed to click on Manage Tab", true);
+            counter++;
+            narrator.failedMessage("Failed to click on Manage Tab - "+errorMsg);
+            return new TestResult(testData, Enums.ResultStatus.FAIL, "Failed to click on Manage Tab", this.getTotalExecutionTime());
+        }
+        
+        if(!clickTemplate()) {
+            SeleniumDriverInstance.takeScreenShot(counter + " - Failed to click on Templates", true);
+            counter++;
+            narrator.failedMessage("Failed to click on Templates - "+errorMsg);
+            return new TestResult(testData, Enums.ResultStatus.FAIL, "Failed to click on Templates", this.getTotalExecutionTime());
+        }
+        
+        if(!clickEventsTemp()) {
+            SeleniumDriverInstance.takeScreenShot(counter + " - Failed to click on Event templates", true);
+            counter++;
+            narrator.failedMessage("Failed to click on Templates - "+errorMsg);
+            return new TestResult(testData, Enums.ResultStatus.FAIL, "Failed to click on Event templates", this.getTotalExecutionTime());
+        }
+        
+        if(!clickLocationTemp()) {
+            SeleniumDriverInstance.takeScreenShot(counter + " - Failed to click on Location templates", true);
+            counter++;
+            narrator.failedMessage("Failed to click on Templates - "+errorMsg);
+            return new TestResult(testData, Enums.ResultStatus.FAIL, "Failed to click on Location templates", this.getTotalExecutionTime());
+        }
+        
+        if(!clickMobileDeviceTemp()) {
+            SeleniumDriverInstance.takeScreenShot(counter + " - Failed to click on Mobile Device templates", true);
+            counter++;
+            narrator.failedMessage("Failed to click on Templates - "+errorMsg);
+            return new TestResult(testData, Enums.ResultStatus.FAIL, "Failed to click on Mobile Device templates", this.getTotalExecutionTime());
+        }
+           
+      return new TestResult(testData, Enums.ResultStatus.PASS, "Successfully navigated to Templates.", this.getTotalExecutionTime());
     }
     
     public Navigate_to_Templates() {}
@@ -65,7 +100,7 @@ public class Navigate_to_Templates extends BaseClass {
     }
     
     public boolean clickEventsTemp() {
-        if(!SeleniumDriverInstance.CheckIfElementIsSelected("//a[text() = 'Event templates']")) {
+        if(!SeleniumDriverInstance.waitForElementByXpath("//a[text() = 'Event templates']", 10)) {
             errorMsg = "Failed to select Events template";
             return false;
         }
