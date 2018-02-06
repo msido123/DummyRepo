@@ -30,6 +30,7 @@ import KeywordDrivenTestFramework.Testing.TestClasses.Utilities.SelectDriver;
 import KeywordDrivenTestFramework.Testing.TestClasses.Login.Login_to_MixTelematicsEU;
 import KeywordDrivenTestFramework.Testing.TestClasses.Login.Navigate;
 import KeywordDrivenTestFramework.ConfigAdmin.NavigateToLibraries;
+import KeywordDrivenTestFramework.ConfigAdmin.Navigate_to_Templates;
 
 
 /**
@@ -181,6 +182,14 @@ public class TestMarshall extends BaseClass
                                 numberOfTest++;
                                 break;
                             }
+                            
+                            case "NavigateToLibraries":
+                            {
+                                Navigate_to_Templates navigateToTemplate = new Navigate_to_Templates(testData);
+                                reportGenerator.addResult(navigateToTemplate.executeTest());
+                                numberOfTest++;
+                                break;
+                            }
                             case "Navigate":
                             {
                                 ensureNewBrowserInstance();
@@ -194,12 +203,6 @@ public class TestMarshall extends BaseClass
                                 ensureNewBrowserInstance();
                                 LogInNewUserValidation logInNewUserValidation = new LogInNewUserValidation(testData);
                                 reportGenerator.addResult(logInNewUserValidation.executeTest());
-                                numberOfTest++;
-                                break;
-                            }case "NavigateToLibraries":
-                            {
-                                NavigateToLibraries navigate = new NavigateToLibraries(testData);
-                                reportGenerator.addResult(navigate.executeTest());
                                 numberOfTest++;
                                 break;
                             }
@@ -343,6 +346,8 @@ public class TestMarshall extends BaseClass
                                 numberOfTest++;
                                 break;
                             }
+                            
+                           
                         }       
                     }
                     catch (Exception ex)

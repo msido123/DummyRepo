@@ -22,7 +22,7 @@ public class Login_to_MyMiXTestPack
     public Login_to_MyMiXTestPack()
     {
         ApplicationConfig appConfig = new ApplicationConfig();
-        TestMarshall.currentEnvironment = Enums.Environment.INTDP;    
+        TestMarshall.currentEnvironment = Enums.Environment.INT;    
     }
     @Test
     public void RunLogin_to_MyMiXTestPackIE() throws FileNotFoundException
