@@ -46,7 +46,7 @@ public class NavigateToLibrariesTestPack
     public void RunMixTelematicsNavigateToLibrariesTestPackFireFox() throws FileNotFoundException
     {
         System.out.println("Mix Telematics Test Pack");   
-        instance = new TestMarshall("TestPacks\\NavigateToLibrariesTestPack.xls", Enums.BrowserType.FireFox);
+        instance = new TestMarshall("TestPacks\\NavigateToLibrariesTestPack.xlsx", Enums.BrowserType.FireFox);
         instance.runKeywordDrivenTests();
     }
     

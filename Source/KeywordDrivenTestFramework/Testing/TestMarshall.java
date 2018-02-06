@@ -190,6 +190,13 @@ public class TestMarshall extends BaseClass
                                 numberOfTest++;
                                 break;
                             }
+                            case "NavigateToLibraries":
+                            {
+                                NavigateToLibraries navToLib = new NavigateToLibraries(testData);
+                                reportGenerator.addResult(navToLib.executeTest());
+                                numberOfTest++;
+                                break;
+                            }
                             case "Navigate":
                             {
                                 ensureNewBrowserInstance();
