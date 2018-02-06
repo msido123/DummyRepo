@@ -28,56 +28,56 @@ public class NavigateToLibraries extends BaseClass{
         this.setStartTime();
         
         if(!clickManage()){
-            SeleniumDriverInstance.takeScreenShot(counter + " - Failed to click on manage", true);
+            SeleniumDriverInstance.takeScreenShot(counter + " - Failed to click on manage", false);
             counter++;
             narrator.failedMessage("Failed to click on manage - "+error);
             return new TestResult(testData, Enums.ResultStatus.FAIL, "Failed to click on manage", this.getTotalExecutionTime());
         }
         
         if(!clickLibraries()){
-            SeleniumDriverInstance.takeScreenShot(counter + " - Failed to click on libraries", true);
+            SeleniumDriverInstance.takeScreenShot(counter + " - Failed to click on libraries", false);
             counter++;
             narrator.failedMessage("Failed to click on libraries - "+error);
             return new TestResult(testData, Enums.ResultStatus.FAIL, "Failed to click on libraries", this.getTotalExecutionTime());
         }
         
         if(!clickEventLibrary()){
-            SeleniumDriverInstance.takeScreenShot(counter + " - Failed to click on event library", true);
+            SeleniumDriverInstance.takeScreenShot(counter + " - Failed to click on event library", false);
             counter++;
             narrator.failedMessage("Failed to click on event libraries - "+error);
             return new TestResult(testData, Enums.ResultStatus.FAIL, "Failed to click on event library", this.getTotalExecutionTime());
         }
         
         if(!clickFirmLibrary()){
-            SeleniumDriverInstance.takeScreenShot(counter + " - Failed to click on firmware library", true);
+            SeleniumDriverInstance.takeScreenShot(counter + " - Failed to click on firmware library", false);
             counter++;
             narrator.failedMessage("Failed to click on firmware library - "+error);
             return new TestResult(testData, Enums.ResultStatus.FAIL, "Failed to click on firmware library", this.getTotalExecutionTime());
         }
         
         if(!clickLocationLibrary()){
-            SeleniumDriverInstance.takeScreenShot(counter + " - Failed to click on location library", true);
+            SeleniumDriverInstance.takeScreenShot(counter + " - Failed to click on location library", false);
             counter++;
             narrator.failedMessage("Failed to click on location ibrary - "+error);
             return new TestResult(testData, Enums.ResultStatus.FAIL, "Failed to click on location library", this.getTotalExecutionTime());
         }
         
         if(!clickMobDevLibrary()){
-            SeleniumDriverInstance.takeScreenShot(counter + " - Failed to click on mobile device library", true);
+            SeleniumDriverInstance.takeScreenShot(counter + " - Failed to click on mobile device library", false);
             counter++;
             narrator.failedMessage("Failed to click on mobile device library - "+error);
             return new TestResult(testData, Enums.ResultStatus.FAIL, "Failed to click on mobile device library", this.getTotalExecutionTime());
         }
         
         if(!clickParaLibrary()){
-            SeleniumDriverInstance.takeScreenShot(counter + " - Failed to click on parameter library", true);
+            SeleniumDriverInstance.takeScreenShot(counter + " - Failed to click on parameter library", false);
             counter++;
             narrator.failedMessage("Failed to click on parameter library - "+error);
             return new TestResult(testData, Enums.ResultStatus.FAIL, "Failed to click on parameter library", this.getTotalExecutionTime());
         }
         
         if(!clickPeriLibrary()){
-            SeleniumDriverInstance.takeScreenShot(counter + " - Failed to click on peripheral library", true);
+            SeleniumDriverInstance.takeScreenShot(counter + " - Failed to click on peripheral library", false);
             counter++;
             narrator.failedMessage("Failed to click on peripheral library - "+error);
             return new TestResult(testData, Enums.ResultStatus.FAIL, "Failed to click on peripheral library", this.getTotalExecutionTime());

@@ -183,10 +183,17 @@ public class TestMarshall extends BaseClass
                                 break;
                             }
                             
-                            case "NavigateToLibraries":
+                            case "NavigateToTemplates":
                             {
                                 Navigate_to_Templates navigateToTemplate = new Navigate_to_Templates(testData);
                                 reportGenerator.addResult(navigateToTemplate.executeTest());
+                                numberOfTest++;
+                                break;
+                            }
+                            case "NavigateToLibraries":
+                            {
+                                NavigateToLibraries navToLib = new NavigateToLibraries(testData);
+                                reportGenerator.addResult(navToLib.executeTest());
                                 numberOfTest++;
                                 break;
                             }
