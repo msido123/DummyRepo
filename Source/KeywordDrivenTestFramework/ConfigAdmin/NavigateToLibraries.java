@@ -110,7 +110,9 @@ public class NavigateToLibraries extends BaseClass{
     }
     
     public boolean clickEventLibrary(){
+        String extractedData = SeleniumDriverInstance.retrieveTextByXpath("//SPAN[@ng-hide='column.headingClass || !column.title'][text()='Event description']");
         if(SeleniumDriverInstance.waitForElementByXpath("//SPAN[@ng-hide='column.headingClass || !column.title'][text()='Event description']")){
+            testData.extractParameter("Extracted Data 1", extractedData, screenshotPath);
             SeleniumDriverInstance.takeScreenShot(counter + " Successflly clicked event library.", false);
             counter++;
             return true;
@@ -124,7 +126,9 @@ public class NavigateToLibraries extends BaseClass{
             SeleniumDriverInstance.clickElementByXpath("//a[text() = \"Firmware library\"]");
         }
         
+        String extractedData = SeleniumDriverInstance.retrieveTextByXpath("//SPAN[@ng-hide='column.headingClass || !column.title'][text()='Description']");
         if(SeleniumDriverInstance.waitForElementByXpath("//SPAN[@ng-hide='column.headingClass || !column.title'][text()='Description']")){
+            testData.extractParameter("Extracted Data 2", extractedData, screenshotPath);
             SeleniumDriverInstance.takeScreenShot(counter + " Successflly clicked firmware library.", false);
             counter++;
             return true;
@@ -138,7 +142,9 @@ public class NavigateToLibraries extends BaseClass{
             SeleniumDriverInstance.clickElementByXpath("//a[text() = \"Location library\"]");
         }
         
+        String extractedData = SeleniumDriverInstance.retrieveTextByXpath("//SPAN[@ng-hide='column.headingClass || !column.title'][text()='Name']");
         if(SeleniumDriverInstance.waitForElementByXpath("//SPAN[@ng-hide='column.headingClass || !column.title'][text()='Name']")){
+            testData.extractParameter("Extracted Data 3", extractedData, screenshotPath);
             SeleniumDriverInstance.takeScreenShot(counter + " Successfuly clicked on location librayr", false);
             counter++;
             return true;
@@ -152,7 +158,9 @@ public class NavigateToLibraries extends BaseClass{
             SeleniumDriverInstance.clickElementByXpath("//a[text() = \"Mobile device library\"]");
         }
         
+        String extractedData = SeleniumDriverInstance.retrieveTextByXpath("//SPAN[@ng-hide='column.headingClass || !column.title'][text()='Mobile device']");
         if(SeleniumDriverInstance.waitForElementByXpath("//SPAN[@ng-hide='column.headingClass || !column.title'][text()='Mobile device']")){
+            testData.extractParameter("Extracted Data 4", extractedData, screenshotPath);
             SeleniumDriverInstance.takeScreenShot(counter + " Successfuly clicked on mobile device library", false);
             counter++;
             return true;
@@ -166,7 +174,9 @@ public class NavigateToLibraries extends BaseClass{
             SeleniumDriverInstance.clickElementByXpath("//a[text() = \"Parameter library\"]");
         }
         
-        if(SeleniumDriverInstance.waitForElementByXpath("//SPAN[@ng-hide='column.headingClass || !column.title'][text()='Mobile device']")){
+        String extractedData = SeleniumDriverInstance.retrieveTextByXpath("//SPAN[@ng-hide='column.headingClass || !column.title'][text()='Parameter']");
+        if(SeleniumDriverInstance.waitForElementByXpath("//SPAN[@ng-hide='column.headingClass || !column.title'][text()='Parameter']")){
+           testData.extractParameter("Extracted Data 5", extractedData, screenshotPath);
            SeleniumDriverInstance.takeScreenShot(counter + " Successfuly clicked on parameter library", false);
            counter++;
            return true; 
@@ -180,7 +190,9 @@ public class NavigateToLibraries extends BaseClass{
             SeleniumDriverInstance.clickElementByXpath("//a[text() = \"Peripheral library\"]");
         }
         
+        String extractedData = SeleniumDriverInstance.retrieveTextByXpath("//SPAN[@ng-hide='column.headingClass || !column.title'][text()='Peripheral']");
         if(SeleniumDriverInstance.waitForElementByXpath("//SPAN[@ng-hide='column.headingClass || !column.title'][text()='Peripheral']")){
+            testData.extractParameter("Extracted Data 6", extractedData, screenshotPath);
             SeleniumDriverInstance.takeScreenShot(counter + " Successfuly clicked on peripheral library", false);
             counter++;
             return true;

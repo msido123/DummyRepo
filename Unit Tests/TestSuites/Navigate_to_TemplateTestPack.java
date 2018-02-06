@@ -13,7 +13,7 @@ import org.junit.Test;
 
 /**
  *
- * @author fnell
+ * @author MsimeleloG
  */
 public class Navigate_to_TemplateTestPack 
 {
@@ -23,7 +23,7 @@ public class Navigate_to_TemplateTestPack
     {
         ApplicationConfig appConfig = new ApplicationConfig();
         
-        instance.currentEnvironment = Enums.Environment.AU;  
+        instance.currentEnvironment = Enums.Environment.INT;  
     }
      
     @Test
