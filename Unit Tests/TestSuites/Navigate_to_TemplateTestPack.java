@@ -15,38 +15,38 @@ import org.junit.Test;
  *
  * @author fnell
  */
-public class LoginTestPack 
+public class Navigate_to_TemplateTestPack 
 {
     static TestMarshall instance; 
     
-     public LoginTestPack()
+     public Navigate_to_TemplateTestPack()
     {
         ApplicationConfig appConfig = new ApplicationConfig();
         
-        instance.currentEnvironment = Enums.Environment.INTDP;  
+        instance.currentEnvironment = Enums.Environment.AU;  
     }
      
     @Test
-    public void RunMixTelematicsLoginTestPackIE() throws FileNotFoundException
+    public void RunMixTelematicsNavigate_to_TemplateTestPackIE() throws FileNotFoundException
     {
         System.out.println("Mix Telematics Test Pack");   
-        instance = new TestMarshall("TestPacks\\LoginTestPack.xls", Enums.BrowserType.IE);
+        instance = new TestMarshall("TestPacks\\Navigate_to_TemplateTestPack.xls", Enums.BrowserType.IE);
         instance.runKeywordDrivenTests();
     }
  
     @Test
-    public void RunMixTelematicsLoginTestPackChrome() throws FileNotFoundException
+    public void RunMixTelematicsNavigate_to_TemplateTestPackChrome() throws FileNotFoundException
     {
         System.out.println("Mix Telematics Test Pack");   
-        instance = new TestMarshall("TestPacks\\LoginTestPack.xls", Enums.BrowserType.Chrome);
+        instance = new TestMarshall("TestPacks\\Navigate_to_TemplateTestPack.xlsx", Enums.BrowserType.Chrome);
         instance.runKeywordDrivenTests();
     }
     
     @Test
-    public void RunMixTelematicsLoginTestPackFireFox() throws FileNotFoundException
+    public void RunMixTelematicsNavigate_to_TemplateTestPackFireFox() throws FileNotFoundException
     {
         System.out.println("Mix Telematics Test Pack");   
-        instance = new TestMarshall("TestPacks\\LoginTestPack.xls", Enums.BrowserType.FireFox);
+        instance = new TestMarshall("TestPacks\\Navigate_to_TemplateTestPack.xls", Enums.BrowserType.FireFox);
         instance.runKeywordDrivenTests();
     }
     
