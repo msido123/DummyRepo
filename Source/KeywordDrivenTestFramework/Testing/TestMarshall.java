@@ -29,6 +29,7 @@ import KeywordDrivenTestFramework.Testing.TestClasses.Utilities.SelectBreadcrum;
 import KeywordDrivenTestFramework.Testing.TestClasses.Utilities.SelectDriver;
 import KeywordDrivenTestFramework.Testing.TestClasses.Login.Login_to_MixTelematicsEU;
 import KeywordDrivenTestFramework.Testing.TestClasses.Login.Navigate;
+import KeywordDrivenTestFramework.ConfigAdmin.NavigateToLibraries;
 
 
 /**
@@ -193,6 +194,12 @@ public class TestMarshall extends BaseClass
                                 ensureNewBrowserInstance();
                                 LogInNewUserValidation logInNewUserValidation = new LogInNewUserValidation(testData);
                                 reportGenerator.addResult(logInNewUserValidation.executeTest());
+                                numberOfTest++;
+                                break;
+                            }case "NavigateToLibraries":
+                            {
+                                NavigateToLibraries navigate = new NavigateToLibraries(testData);
+                                reportGenerator.addResult(navigate.executeTest());
                                 numberOfTest++;
                                 break;
                             }
