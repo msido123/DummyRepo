@@ -17,7 +17,6 @@ public class NavigateToLibraries extends BaseClass{
     
     String error;
     int counter = 1;
-    boolean isNegative;
     TestEntity testData;
     
     public NavigateToLibraries(TestEntity testData){
@@ -33,6 +32,8 @@ public class NavigateToLibraries extends BaseClass{
             narrator.failedMessage("Failed to click on manage - "+error);
             return new TestResult(testData, Enums.ResultStatus.FAIL, "Failed to click on manage", this.getTotalExecutionTime());
         }
+        SeleniumDriverInstance.takeScreenShot(counter + " Successfully found manage.", false);
+        counter++;
         
         if(!clickLibraries()){
             SeleniumDriverInstance.takeScreenShot(counter + " - Failed to click on libraries", false);
@@ -40,6 +41,8 @@ public class NavigateToLibraries extends BaseClass{
             narrator.failedMessage("Failed to click on libraries - "+error);
             return new TestResult(testData, Enums.ResultStatus.FAIL, "Failed to click on libraries", this.getTotalExecutionTime());
         }
+        SeleniumDriverInstance.takeScreenShot(counter + " Successfully clicked on Libraries.", false);
+        counter++;
         
         if(!clickEventLibrary()){
             SeleniumDriverInstance.takeScreenShot(counter + " - Failed to click on event library", false);
@@ -47,6 +50,8 @@ public class NavigateToLibraries extends BaseClass{
             narrator.failedMessage("Failed to click on event libraries - "+error);
             return new TestResult(testData, Enums.ResultStatus.FAIL, "Failed to click on event library", this.getTotalExecutionTime());
         }
+        SeleniumDriverInstance.takeScreenShot(counter + " Successflly clicked event library.", false);
+        counter++;
         
         if(!clickFirmLibrary()){
             SeleniumDriverInstance.takeScreenShot(counter + " - Failed to click on firmware library", false);
@@ -54,6 +59,8 @@ public class NavigateToLibraries extends BaseClass{
             narrator.failedMessage("Failed to click on firmware library - "+error);
             return new TestResult(testData, Enums.ResultStatus.FAIL, "Failed to click on firmware library", this.getTotalExecutionTime());
         }
+        SeleniumDriverInstance.takeScreenShot(counter + " Successflly clicked firmware library.", false);
+        counter++;
         
         if(!clickLocationLibrary()){
             SeleniumDriverInstance.takeScreenShot(counter + " - Failed to click on location library", false);
@@ -61,6 +68,8 @@ public class NavigateToLibraries extends BaseClass{
             narrator.failedMessage("Failed to click on location ibrary - "+error);
             return new TestResult(testData, Enums.ResultStatus.FAIL, "Failed to click on location library", this.getTotalExecutionTime());
         }
+        SeleniumDriverInstance.takeScreenShot(counter + " Successfuly clicked on location librayr", false);
+        counter++;
         
         if(!clickMobDevLibrary()){
             SeleniumDriverInstance.takeScreenShot(counter + " - Failed to click on mobile device library", false);
@@ -68,6 +77,8 @@ public class NavigateToLibraries extends BaseClass{
             narrator.failedMessage("Failed to click on mobile device library - "+error);
             return new TestResult(testData, Enums.ResultStatus.FAIL, "Failed to click on mobile device library", this.getTotalExecutionTime());
         }
+        SeleniumDriverInstance.takeScreenShot(counter + " Successfuly clicked on mobile device library", false);
+        counter++;
         
         if(!clickParaLibrary()){
             SeleniumDriverInstance.takeScreenShot(counter + " - Failed to click on parameter library", false);
@@ -75,13 +86,18 @@ public class NavigateToLibraries extends BaseClass{
             narrator.failedMessage("Failed to click on parameter library - "+error);
             return new TestResult(testData, Enums.ResultStatus.FAIL, "Failed to click on parameter library", this.getTotalExecutionTime());
         }
-        
+        SeleniumDriverInstance.takeScreenShot(counter + " Successfuly clicked on parameter library", false);
+        counter++;
+
         if(!clickPeriLibrary()){
             SeleniumDriverInstance.takeScreenShot(counter + " - Failed to click on peripheral library", false);
             counter++;
             narrator.failedMessage("Failed to click on peripheral library - "+error);
             return new TestResult(testData, Enums.ResultStatus.FAIL, "Failed to click on peripheral library", this.getTotalExecutionTime());
         }
+        SeleniumDriverInstance.takeScreenShot(counter + " Successfuly clicked on peripheral library", false);
+        counter++;
+        
         return new TestResult(testData, Enums.ResultStatus.PASS, "Successfully navigated to libraries.", this.getTotalExecutionTime());
     }
     
@@ -92,8 +108,6 @@ public class NavigateToLibraries extends BaseClass{
         }
         
         SeleniumDriverInstance.clickElementbyXpath("(//A[@href='#'])[2]");
-        SeleniumDriverInstance.takeScreenShot(counter + " Successfully found manage.", false);
-        counter++;
         return true;
     }
     
@@ -102,10 +116,7 @@ public class NavigateToLibraries extends BaseClass{
             error = "Libraries not visible.";
             return false;
         }
-        
         SeleniumDriverInstance.clickElementbyXpath("//A[@ng-href='#/config-admin/libraries'][text()='Libraries']");
-        SeleniumDriverInstance.takeScreenShot(counter + " Successfully clicked on Libraries.", false);
-        counter++;
         return true;
     }
     
@@ -113,8 +124,6 @@ public class NavigateToLibraries extends BaseClass{
         String extractedData = SeleniumDriverInstance.retrieveTextByXpath("//SPAN[@ng-hide='column.headingClass || !column.title'][text()='Event description']");
         if(SeleniumDriverInstance.waitForElementByXpath("//SPAN[@ng-hide='column.headingClass || !column.title'][text()='Event description']")){
             testData.extractParameter("Extracted Data 1", extractedData, screenshotPath);
-            SeleniumDriverInstance.takeScreenShot(counter + " Successflly clicked event library.", false);
-            counter++;
             return true;
         }
         error = "Failed to click on Event library";
@@ -129,8 +138,6 @@ public class NavigateToLibraries extends BaseClass{
         String extractedData = SeleniumDriverInstance.retrieveTextByXpath("//SPAN[@ng-hide='column.headingClass || !column.title'][text()='Description']");
         if(SeleniumDriverInstance.waitForElementByXpath("//SPAN[@ng-hide='column.headingClass || !column.title'][text()='Description']")){
             testData.extractParameter("Extracted Data 2", extractedData, screenshotPath);
-            SeleniumDriverInstance.takeScreenShot(counter + " Successflly clicked firmware library.", false);
-            counter++;
             return true;
         }
         error = "Failed to click on Firmware library";
@@ -145,8 +152,6 @@ public class NavigateToLibraries extends BaseClass{
         String extractedData = SeleniumDriverInstance.retrieveTextByXpath("//SPAN[@ng-hide='column.headingClass || !column.title'][text()='Name']");
         if(SeleniumDriverInstance.waitForElementByXpath("//SPAN[@ng-hide='column.headingClass || !column.title'][text()='Name']")){
             testData.extractParameter("Extracted Data 3", extractedData, screenshotPath);
-            SeleniumDriverInstance.takeScreenShot(counter + " Successfuly clicked on location librayr", false);
-            counter++;
             return true;
         }
         error = "Failed to click on Location library";
@@ -161,8 +166,6 @@ public class NavigateToLibraries extends BaseClass{
         String extractedData = SeleniumDriverInstance.retrieveTextByXpath("//SPAN[@ng-hide='column.headingClass || !column.title'][text()='Mobile device']");
         if(SeleniumDriverInstance.waitForElementByXpath("//SPAN[@ng-hide='column.headingClass || !column.title'][text()='Mobile device']")){
             testData.extractParameter("Extracted Data 4", extractedData, screenshotPath);
-            SeleniumDriverInstance.takeScreenShot(counter + " Successfuly clicked on mobile device library", false);
-            counter++;
             return true;
         }
         error = "Failed to click on Mobile device library";
@@ -177,8 +180,6 @@ public class NavigateToLibraries extends BaseClass{
         String extractedData = SeleniumDriverInstance.retrieveTextByXpath("//SPAN[@ng-hide='column.headingClass || !column.title'][text()='Parameter']");
         if(SeleniumDriverInstance.waitForElementByXpath("//SPAN[@ng-hide='column.headingClass || !column.title'][text()='Parameter']")){
            testData.extractParameter("Extracted Data 5", extractedData, screenshotPath);
-           SeleniumDriverInstance.takeScreenShot(counter + " Successfuly clicked on parameter library", false);
-           counter++;
            return true; 
         }
         error = "Failed to click on Parameter library";
@@ -193,8 +194,6 @@ public class NavigateToLibraries extends BaseClass{
         String extractedData = SeleniumDriverInstance.retrieveTextByXpath("//SPAN[@ng-hide='column.headingClass || !column.title'][text()='Peripheral']");
         if(SeleniumDriverInstance.waitForElementByXpath("//SPAN[@ng-hide='column.headingClass || !column.title'][text()='Peripheral']")){
             testData.extractParameter("Extracted Data 6", extractedData, screenshotPath);
-            SeleniumDriverInstance.takeScreenShot(counter + " Successfuly clicked on peripheral library", false);
-            counter++;
             return true;
         }
         error = "Failed to click on Peripheral library";

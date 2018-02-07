@@ -1,5 +1,6 @@
 package KeywordDrivenTestFramework.Testing;
 
+import KeywordDrivenTestFramework.ConfigAdmin.NavigateAndAddEvent;
 import KeywordDrivenTestFramework.Core.BaseClass;
 import static KeywordDrivenTestFramework.Core.BaseClass.narrator;
 import KeywordDrivenTestFramework.Entities.Enums;
@@ -31,6 +32,7 @@ import KeywordDrivenTestFramework.Testing.TestClasses.Login.Login_to_MixTelemati
 import KeywordDrivenTestFramework.Testing.TestClasses.Login.Navigate;
 import KeywordDrivenTestFramework.ConfigAdmin.NavigateToLibraries;
 import KeywordDrivenTestFramework.ConfigAdmin.Navigate_to_Templates;
+import KeywordDrivenTestFramework.ConfigAdmin.NavigateAndSearch;
 
 
 /**
@@ -194,6 +196,20 @@ public class TestMarshall extends BaseClass
                             {
                                 NavigateToLibraries navToLib = new NavigateToLibraries(testData);
                                 reportGenerator.addResult(navToLib.executeTest());
+                                numberOfTest++;
+                                break;
+                            }
+                            case "NavigateAndSearch":
+                            {
+                                NavigateAndSearch navSearch = new NavigateAndSearch(testData);
+                                reportGenerator.addResult(navSearch.executeTest());
+                                numberOfTest++;
+                                break;
+                            }
+                            case "NavigateAndAddEvent":
+                            {
+                                NavigateAndAddEvent navSearch = new NavigateAndAddEvent(testData);
+                                reportGenerator.addResult(navSearch.executeTest());
                                 numberOfTest++;
                                 break;
                             }
