@@ -104,13 +104,14 @@ public class NavigateAndAddEvent extends BaseClass{
         SeleniumDriverInstance.takeScreenShot(counter + " Successflly clicked save button", false);
         counter++;
         
+        //pause(1000);
         if(!checkIfPopUpDisplayed()){
             SeleniumDriverInstance.takeScreenShot(counter + " - Pop up window not displayed.", false);
             counter++;
             narrator.failedMessage("Pop up window not displayed. - "+error);
             return new TestResult(testData, Enums.ResultStatus.FAIL, "Pop up window not displayed.", this.getTotalExecutionTime());
         }
-        SeleniumDriverInstance.takeScreenShot(counter + "Pop up window not displayed.", false);
+        SeleniumDriverInstance.takeScreenShot(counter + " Pop up window displayed.", false);
         counter++;
         
         if(!tickRecordEventBox()){
@@ -140,7 +141,7 @@ public class NavigateAndAddEvent extends BaseClass{
         SeleniumDriverInstance.takeScreenShot(counter + " Successfully clicked on filter.", false);
         counter++;
         
-        if(!navSearch.inputTextToFilter("07 Feb 2018")){
+        if(!navSearch.inputTextToFilter("Mix Telematics Event Library")){
             SeleniumDriverInstance.takeScreenShot(counter + " - Failed to filter events.", false);
             counter++;
             narrator.failedMessage("Failed to filter events. - "+error);
@@ -174,11 +175,11 @@ public class NavigateAndAddEvent extends BaseClass{
     
     public String myDateStamp(){
         String dateTimeStamp;
-        DateFormat dateFormat2 = new SimpleDateFormat("dd/MMM/yyyy HHh:mm:ss");
+        DateFormat dateFormat2 = new SimpleDateFormat("dd/MM/yyyy");
         Date date2 = new Date();
         dateTimeStamp = dateFormat2.format(date2);
-        dateTimeStamp = dateTimeStamp.replaceAll("/", " ");
-        dateTimeStamp = dateTimeStamp.replaceAll(":", "");
+        dateTimeStamp = dateTimeStamp.replaceAll("/", "");
+        /**dateTimeStamp = dateTimeStamp.replaceAll(":", "");*/
         
         return dateTimeStamp;
     }
@@ -189,7 +190,7 @@ public class NavigateAndAddEvent extends BaseClass{
             return false;
         }
         
-        SeleniumDriverInstance.enterTextByXpath("//INPUT[@class='span12 ng-pristine ng-invalid ng-invalid-dmx-required ng-valid-dmx-minlength ng-valid-dmx-maxlength ng-valid-fleet-event-description-unique-async']", myDateStamp());
+        SeleniumDriverInstance.enterTextByXpath("//INPUT[@class='span12 ng-pristine ng-invalid ng-invalid-dmx-required ng-valid-dmx-minlength ng-valid-dmx-maxlength ng-valid-fleet-event-description-unique-async']", myDateStamp() + "_MiX Telematics Event Library");
         return true;
     }
     

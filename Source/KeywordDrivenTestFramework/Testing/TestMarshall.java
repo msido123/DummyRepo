@@ -1,6 +1,7 @@
 package KeywordDrivenTestFramework.Testing;
 
 import KeywordDrivenTestFramework.ConfigAdmin.NavigateAndAddEvent;
+import KeywordDrivenTestFramework.ConfigAdmin.NavigateAndEditLocation;
 import KeywordDrivenTestFramework.Core.BaseClass;
 import static KeywordDrivenTestFramework.Core.BaseClass.narrator;
 import KeywordDrivenTestFramework.Entities.Enums;
@@ -210,6 +211,13 @@ public class TestMarshall extends BaseClass
                             {
                                 NavigateAndAddEvent navSearch = new NavigateAndAddEvent(testData);
                                 reportGenerator.addResult(navSearch.executeTest());
+                                numberOfTest++;
+                                break;
+                            }
+                            case "NavigateAndEditLocation":
+                            {
+                                NavigateAndEditLocation navEdit = new NavigateAndEditLocation(testData);
+                                reportGenerator.addResult(navEdit.executeTest());
                                 numberOfTest++;
                                 break;
                             }
