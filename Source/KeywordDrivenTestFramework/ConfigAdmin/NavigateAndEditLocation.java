@@ -16,7 +16,9 @@ import KeywordDrivenTestFramework.Entities.TestResult;
 public class NavigateAndEditLocation extends BaseClass{
     String error;
     int counter = 1;
-    int randomSpeed = (int)(Math.random() * 200);;
+    int randomSpeed = (int)(Math.random() * 200);
+    String extractedData1;
+    String extractedData2;
     TestEntity testData;
     NavigateToLibraries nav;
     
@@ -61,6 +63,9 @@ public class NavigateAndEditLocation extends BaseClass{
             narrator.failedMessage("Failed to click to filter - "+error);
             return new TestResult(testData, Enums.ResultStatus.FAIL, "Failed to filter", this.getTotalExecutionTime());
         }
+        //EXTRACTING BEFORE DATA
+        extractedData2 = SeleniumDriverInstance.retrieveTextByXpath("(//DIV)[103]");
+        
         SeleniumDriverInstance.takeScreenShot(counter + " Successfully filtered.", false);
         counter++;
         
@@ -104,6 +109,8 @@ public class NavigateAndEditLocation extends BaseClass{
         SeleniumDriverInstance.takeScreenShot(counter + " Successfully edited a location.", false);
         counter++;
         
+        testData.extractParameter("Extracted Data Before Edit", extractedData2, screenshotPath);
+        testData.extractParameter("Extracted Data After Edit", extractedData1, screenshotPath);
         return new TestResult(testData, Enums.ResultStatus.PASS, "Successfully edited an event.", this.getTotalExecutionTime());
     }
     
@@ -141,15 +148,14 @@ public class NavigateAndEditLocation extends BaseClass{
     }
     
     public boolean checkResultOfEdit(){
-        String extractedData;
         boolean isEdited = false;
         if(!SeleniumDriverInstance.waitForElementByXpath("(//DIV)[103]")){
             error = "Did not filter properly.";
             return isEdited;
         }
         
-        extractedData = SeleniumDriverInstance.retrieveTextByXpath("(//DIV)[103]");
-        if(extractedData.contains(randomSpeed+"")){
+        extractedData1 = SeleniumDriverInstance.retrieveTextByXpath("(//DIV)[103]");
+        if(extractedData1.contains(randomSpeed+"")){
             isEdited = true;
         }
         return isEdited;
