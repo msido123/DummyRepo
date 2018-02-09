@@ -111,6 +111,7 @@ public class NavigateAndEditLocation extends BaseClass{
         
         testData.extractParameter("Extracted Data Before Edit", extractedData2, screenshotPath);
         testData.extractParameter("Extracted Data After Edit", extractedData1, screenshotPath);
+        
         return new TestResult(testData, Enums.ResultStatus.PASS, "Successfully edited an event.", this.getTotalExecutionTime());
     }
     

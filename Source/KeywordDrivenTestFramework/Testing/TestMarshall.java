@@ -1,5 +1,6 @@
 package KeywordDrivenTestFramework.Testing;
 
+import KeywordDrivenTestFramework.ConfigAdmin.MakeDeviceAvailable;
 import KeywordDrivenTestFramework.ConfigAdmin.NavigateAndAddEvent;
 import KeywordDrivenTestFramework.ConfigAdmin.NavigateAndEditLocation;
 import KeywordDrivenTestFramework.Core.BaseClass;
@@ -218,6 +219,13 @@ public class TestMarshall extends BaseClass
                             {
                                 NavigateAndEditLocation navEdit = new NavigateAndEditLocation(testData);
                                 reportGenerator.addResult(navEdit.executeTest());
+                                numberOfTest++;
+                                break;
+                            }
+                            case "MakeDeviceAvailable":
+                            {
+                                MakeDeviceAvailable avail = new MakeDeviceAvailable(testData);
+                                reportGenerator.addResult(avail.executeTest());
                                 numberOfTest++;
                                 break;
                             }

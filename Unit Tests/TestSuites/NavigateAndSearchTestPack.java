@@ -15,11 +15,11 @@ import org.junit.Test;
  *
  * @author fnell
  */
-public class NavivgateAndSearchTestPack 
+public class NavigateAndSearchTestPack 
 {
     static TestMarshall instance; 
     
-     public NavivgateAndSearchTestPack()
+     public NavigateAndSearchTestPack()
     {
         ApplicationConfig appConfig = new ApplicationConfig();
         
