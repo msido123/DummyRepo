@@ -1,5 +1,7 @@
 package KeywordDrivenTestFramework.Testing;
 
+import KeywordDrivenTestFramework.ConfigAdmin.CreateConfigGroup;
+import KeywordDrivenTestFramework.ConfigAdmin.EditParameterInLibrary;
 import KeywordDrivenTestFramework.ConfigAdmin.MakeDeviceAvailable;
 import KeywordDrivenTestFramework.ConfigAdmin.NavigateAndAddEvent;
 import KeywordDrivenTestFramework.ConfigAdmin.NavigateAndEditLocation;
@@ -226,6 +228,20 @@ public class TestMarshall extends BaseClass
                             {
                                 MakeDeviceAvailable avail = new MakeDeviceAvailable(testData);
                                 reportGenerator.addResult(avail.executeTest());
+                                numberOfTest++;
+                                break;
+                            }
+                            case "EditParameter":
+                            {
+                                EditParameterInLibrary editPara = new EditParameterInLibrary(testData);
+                                reportGenerator.addResult(editPara.executeTest());
+                                numberOfTest++;
+                                break;
+                            }
+                            case "CreateConfigGroup":
+                            {
+                                CreateConfigGroup configG = new CreateConfigGroup(testData);
+                                reportGenerator.addResult(configG.executeTest());
                                 numberOfTest++;
                                 break;
                             }

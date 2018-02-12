@@ -10,7 +10,6 @@ import static KeywordDrivenTestFramework.Core.BaseClass.SeleniumDriverInstance;
 import KeywordDrivenTestFramework.Entities.Enums;
 import KeywordDrivenTestFramework.Entities.TestEntity;
 import KeywordDrivenTestFramework.Entities.TestResult;
-import KeywordDrivenTestFramework.Core.BaseClass;
 /**
  *
  * @author MzuvukileN
