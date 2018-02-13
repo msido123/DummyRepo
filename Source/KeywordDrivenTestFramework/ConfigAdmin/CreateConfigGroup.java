@@ -177,7 +177,7 @@ public class CreateConfigGroup extends BaseClass{
             return false;
         }
         SeleniumDriverInstance.clickElementByXpath("(//A[@fleet-tooltip='Actions'])[2]");
-        SeleniumDriverInstance.clickElementByXpath("//span[text() = 'Edit']");
+        SeleniumDriverInstance.clickElementByXpath("//i[@class = 'icon icon-edit icon-green']");
         return true;
     }
     
