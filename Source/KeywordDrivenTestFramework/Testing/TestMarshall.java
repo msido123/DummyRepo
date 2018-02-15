@@ -2,6 +2,7 @@ package KeywordDrivenTestFramework.Testing;
 
 import KeywordDrivenTestFramework.ConfigAdmin.CompileConfig;
 import KeywordDrivenTestFramework.ConfigAdmin.CreateConfigGroup;
+import KeywordDrivenTestFramework.ConfigAdmin.DownloadConfigFile;
 import KeywordDrivenTestFramework.ConfigAdmin.EditParameterInLibrary;
 import KeywordDrivenTestFramework.ConfigAdmin.MakeDeviceAvailable;
 import KeywordDrivenTestFramework.ConfigAdmin.NavigateAndAddEvent;
@@ -250,6 +251,13 @@ public class TestMarshall extends BaseClass
                             {
                                 CompileConfig compileConfig = new CompileConfig(testData);
                                 reportGenerator.addResult(compileConfig.executeTest());
+                                numberOfTest++;
+                                break;
+                            }
+                            case "DownloadConfigFile":
+                            {
+                                DownloadConfigFile downloader = new DownloadConfigFile(testData);
+                                reportGenerator.addResult(downloader.executeTest());
                                 numberOfTest++;
                                 break;
                             }
