@@ -1,5 +1,6 @@
 package KeywordDrivenTestFramework.Testing;
 
+import KeywordDrivenTestFramework.ConfigAdmin.CompileConfig;
 import KeywordDrivenTestFramework.ConfigAdmin.CreateConfigGroup;
 import KeywordDrivenTestFramework.ConfigAdmin.EditParameterInLibrary;
 import KeywordDrivenTestFramework.ConfigAdmin.MakeDeviceAvailable;
@@ -242,6 +243,13 @@ public class TestMarshall extends BaseClass
                             {
                                 CreateConfigGroup configG = new CreateConfigGroup(testData);
                                 reportGenerator.addResult(configG.executeTest());
+                                numberOfTest++;
+                                break;
+                            }
+                            case "CompileConfig":
+                            {
+                                CompileConfig compileConfig = new CompileConfig(testData);
+                                reportGenerator.addResult(compileConfig.executeTest());
                                 numberOfTest++;
                                 break;
                             }

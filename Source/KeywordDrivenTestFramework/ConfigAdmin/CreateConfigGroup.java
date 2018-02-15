@@ -73,7 +73,7 @@ public class CreateConfigGroup extends BaseClass{
         SeleniumDriverInstance.takeScreenShot(counter + " Successfully added details.", false);
         counter++;
         
-        if(!filterConfigGroups()){
+        if(!filterConfigGroups(configGroupName)){
             SeleniumDriverInstance.takeScreenShot(counter + " - Failed to filter configurations groups.", false);
             counter++;
             narrator.failedMessage("Failed to filter configurations groups - "+error);
@@ -100,7 +100,7 @@ public class CreateConfigGroup extends BaseClass{
         SeleniumDriverInstance.takeScreenShot(counter + " Successfully confirmed details match the input data;.", false);
         counter++;
         
-        if(!filterConfigGroups()){
+        if(!filterConfigGroups(configGroupName)){
             SeleniumDriverInstance.takeScreenShot(counter + " - Failed to filter configurations groups.", false);
             counter++;
             narrator.failedMessage("Failed to filter configurations groups - "+error);
@@ -161,12 +161,12 @@ public class CreateConfigGroup extends BaseClass{
         return true;
     }
     
-    public boolean filterConfigGroups(){
+    public boolean filterConfigGroups(String textToFilter){
         if(!SeleniumDriverInstance.waitForElementByXpath("(//INPUT[@type='text'])[1]")){
             error = "Could not find filter input field.";
             return false;
         }
-        SeleniumDriverInstance.enterTextByXpath("(//INPUT[@type='text'])[1]", configGroupName);
+        SeleniumDriverInstance.enterTextByXpath("(//INPUT[@type='text'])[1]", textToFilter);
         pause(1000);
         return true;
     }
