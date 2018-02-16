@@ -64,6 +64,20 @@ public class Navigate_to_Templates extends BaseClass {
             narrator.failedMessage("Failed to click on Templates - "+errorMsg);
             return new TestResult(testData, Enums.ResultStatus.FAIL, "Failed to click on Mobile Device templates", this.getTotalExecutionTime());
         }
+        
+        if(!clickEventsTempName()) {
+            SeleniumDriverInstance.takeScreenShot(counter + " - Failed to click on Template Name", true);
+            counter++;
+            narrator.failedMessage("Failed to click on Template name - "+errorMsg);
+            return new TestResult(testData, Enums.ResultStatus.FAIL, "Failed to click on Template Name", this.getTotalExecutionTime());
+        }
+        
+        if(!clickMobileDeviceType()) {
+            SeleniumDriverInstance.takeScreenShot(counter + " - Failed to click on Mobile Device Type", true);
+            counter++;
+            narrator.failedMessage("Failed to click on Template name - "+errorMsg);
+            return new TestResult(testData, Enums.ResultStatus.FAIL, "Failed to click on Mobile Device Type", this.getTotalExecutionTime());
+        }
            
       return new TestResult(testData, Enums.ResultStatus.PASS, "Successfully navigated to Templates.", this.getTotalExecutionTime());
     }
@@ -113,12 +127,17 @@ public class Navigate_to_Templates extends BaseClass {
    
     }
     public boolean clickEventsTempName() {
+       
+        String extractData = SeleniumDriverInstance.retrieveTextByXpath("//SPAN[@ng-hide='column.headingClass || !column.title'][text()='Template name']");
+        
         if(!SeleniumDriverInstance.CheckIfElementDisplayedByXpath("//SPAN[@ng-hide='column.headingClass || !column.title'][text()='Template name']")) {
             errorMsg = "Template name cannot be displayed";
             return false;
         }
         
         SeleniumDriverInstance.clickElementByXpath("//SPAN[@ng-hide='column.headingClass || !column.title'][text()='Template name']");
+        //testData.extractParameter("Extracted Data ", "Name: Data" +  "<br>" + "Notes: data not found","Fail");
+        testData.extractParameter("Exrtracted Data", extractData, screenshotPath);
         SeleniumDriverInstance.takeScreenShot(counter + "- Events template name clicked successfully -" , false);
         counter++;
         return true;
@@ -150,6 +169,8 @@ public class Navigate_to_Templates extends BaseClass {
     }
     
     public boolean clickLocationTemp() {
+        
+        
         if(!SeleniumDriverInstance.waitForElementByXpath("//a[text() = 'Location templates']", 10)) {
             
             errorMsg = "Failed to click location templates";
@@ -176,6 +197,9 @@ public class Navigate_to_Templates extends BaseClass {
     }
     
     public boolean clickMobileDeviceType() {
+        
+        String extractedData = SeleniumDriverInstance.retrieveTextByXpath("//SPAN[@ng-hide='column.headingClass || !column.title'][text()='Mobile device type']");
+        
         if(!SeleniumDriverInstance.CheckIfElementDisplayedByXpath("//SPAN[@ng-hide='column.headingClass || !column.title'][text()='Mobile device type']")) {
             
             errorMsg = "Mobile Device Type cannot be displayed";
@@ -183,6 +207,7 @@ public class Navigate_to_Templates extends BaseClass {
         }
         
         SeleniumDriverInstance.clickElementByXpath("//SPAN[@ng-hide='column.headingClass || !column.title'][text()='Mobile device type']");
+        testData.extractParameter("Exrtracted Data 1", extractedData, screenshotPath);
         SeleniumDriverInstance.takeScreenShot(counter + "- Mobile Device Type clicked successfully", false);
         counter++;
         return true;
