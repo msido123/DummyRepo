@@ -1,5 +1,11 @@
 package KeywordDrivenTestFramework.Testing;
 
+import KeywordDrivenTestFramework.ConfigAdmin.AddNewTemplate;
+import KeywordDrivenTestFramework.ConfigAdmin.CreateLocationTemplate;
+import KeywordDrivenTestFramework.ConfigAdmin.CreateMobileDeviceTemplate;
+import KeywordDrivenTestFramework.ConfigAdmin.DuplicateMobileDeviceTemplate;
+import KeywordDrivenTestFramework.ConfigAdmin.EditMobileDeviceTemplate;
+import KeywordDrivenTestFramework.ConfigAdmin.InputTextAndSearchOnFilter;
 import KeywordDrivenTestFramework.ConfigAdmin.CompileConfig;
 import KeywordDrivenTestFramework.ConfigAdmin.CreateConfigGroup;
 import KeywordDrivenTestFramework.ConfigAdmin.DownloadConfigFile;
@@ -38,6 +44,9 @@ import KeywordDrivenTestFramework.Testing.TestClasses.Login.Login_to_MixTelemati
 import KeywordDrivenTestFramework.Testing.TestClasses.Login.Navigate;
 import KeywordDrivenTestFramework.ConfigAdmin.NavigateToLibraries;
 import KeywordDrivenTestFramework.ConfigAdmin.Navigate_to_Templates;
+import KeywordDrivenTestFramework.FleetAdmin.CreateNewAsset;
+import KeywordDrivenTestFramework.Monitor.FleetAdmin.Assets.CheckDiagnosticWindowLoadInfo;
+import KeywordDrivenTestFramework.Monitor.FleetAdmin.Assets.ExportDiagnosticsInformation;
 import KeywordDrivenTestFramework.ConfigAdmin.NavigateAndSearch;
 import KeywordDrivenTestFramework.FleetAdmin.ImportAsset;
 
@@ -206,6 +215,70 @@ public class TestMarshall extends BaseClass
                                 numberOfTest++;
                                 break;
                             }
+                            case "NavigateToEventTemplatePage":
+                            {
+                                InputTextAndSearchOnFilter inputAndSearch = new InputTextAndSearchOnFilter(testData);
+                                reportGenerator.addResult(inputAndSearch.executeTest());
+                                numberOfTest++;
+                                break;
+                            }
+                            case "AddNewTemplate":
+                            {
+                                AddNewTemplate addNewTempToEvents = new AddNewTemplate(testData);
+                                reportGenerator.addResult(addNewTempToEvents.executeTest());
+                                numberOfTest++;
+                                break;
+                            }
+                            case "CreateNewLocationTemplate":
+                            {
+                                CreateLocationTemplate createNewLocation = new CreateLocationTemplate(testData);
+                                 reportGenerator.addResult(createNewLocation.executeTest());
+                                numberOfTest++;
+                                break;
+                            }
+                            case "CreateMobileDeviceTemplate":
+                            {
+                                CreateMobileDeviceTemplate createMobileDeviceTemp = new CreateMobileDeviceTemplate(testData);
+                                reportGenerator.addResult(createMobileDeviceTemp.executeTest());
+                                numberOfTest++;
+                                break;
+                            }
+                            case "EditMobileDeviceTemplate":
+                            {
+                                EditMobileDeviceTemplate editMobileDeviceTemp = new EditMobileDeviceTemplate(testData);
+                                reportGenerator.addResult(editMobileDeviceTemp.executeTest());
+                                numberOfTest++;
+                                break;
+                            }
+                            case "DuplicateMobileDeviceTemplate":
+                            {
+                                DuplicateMobileDeviceTemplate duplicateMobileDeviceTemplate = new DuplicateMobileDeviceTemplate(testData);
+                                reportGenerator.addResult(duplicateMobileDeviceTemplate.executeTest());
+                                numberOfTest++;
+                                break;
+                            }
+                            case "CreateNewAsset":
+                            {
+                                CreateNewAsset createNewAsset = new CreateNewAsset(testData);
+                                reportGenerator.addResult(createNewAsset.executeTest());
+                                numberOfTest++;
+                                break;
+                            }
+                            case "CheckDiagnosticWindowLoadInfo":
+                            {
+                                CheckDiagnosticWindowLoadInfo checkDiagnosticWindow = new CheckDiagnosticWindowLoadInfo(testData);
+                                reportGenerator.addResult(checkDiagnosticWindow.executeTest());
+                                numberOfTest++;
+                                break;
+                            }
+                            case "ExportDiagnosticsInformation":
+                            {
+                                ExportDiagnosticsInformation exportDiagnosticInfo = new ExportDiagnosticsInformation(testData);
+                                reportGenerator.addResult(exportDiagnosticInfo.executeTest());
+                                numberOfTest++;
+                                break;
+                            }
+
                             case "NavigateAndSearch":
                             {
                                 NavigateAndSearch navSearch = new NavigateAndSearch(testData);
