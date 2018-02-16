@@ -6,6 +6,13 @@ import KeywordDrivenTestFramework.ConfigAdmin.CreateMobileDeviceTemplate;
 import KeywordDrivenTestFramework.ConfigAdmin.DuplicateMobileDeviceTemplate;
 import KeywordDrivenTestFramework.ConfigAdmin.EditMobileDeviceTemplate;
 import KeywordDrivenTestFramework.ConfigAdmin.InputTextAndSearchOnFilter;
+import KeywordDrivenTestFramework.ConfigAdmin.CompileConfig;
+import KeywordDrivenTestFramework.ConfigAdmin.CreateConfigGroup;
+import KeywordDrivenTestFramework.ConfigAdmin.DownloadConfigFile;
+import KeywordDrivenTestFramework.ConfigAdmin.EditParameterInLibrary;
+import KeywordDrivenTestFramework.ConfigAdmin.MakeDeviceAvailable;
+import KeywordDrivenTestFramework.ConfigAdmin.NavigateAndAddEvent;
+import KeywordDrivenTestFramework.ConfigAdmin.NavigateAndEditLocation;
 import KeywordDrivenTestFramework.Core.BaseClass;
 import static KeywordDrivenTestFramework.Core.BaseClass.narrator;
 import KeywordDrivenTestFramework.Entities.Enums;
@@ -40,6 +47,7 @@ import KeywordDrivenTestFramework.ConfigAdmin.Navigate_to_Templates;
 import KeywordDrivenTestFramework.FleetAdmin.CreateNewAsset;
 import KeywordDrivenTestFramework.Monitor.FleetAdmin.Assets.CheckDiagnosticWindowLoadInfo;
 import KeywordDrivenTestFramework.Monitor.FleetAdmin.Assets.ExportDiagnosticsInformation;
+import KeywordDrivenTestFramework.ConfigAdmin.NavigateAndSearch;
 
 
 /**
@@ -266,6 +274,63 @@ public class TestMarshall extends BaseClass
                             {
                                 ExportDiagnosticsInformation exportDiagnosticInfo = new ExportDiagnosticsInformation(testData);
                                 reportGenerator.addResult(exportDiagnosticInfo.executeTest());
+                                numberOfTest++;
+                                break;
+                            }
+
+                            case "NavigateAndSearch":
+                            {
+                                NavigateAndSearch navSearch = new NavigateAndSearch(testData);
+                                reportGenerator.addResult(navSearch.executeTest());
+                                numberOfTest++;
+                                break;
+                            }
+                            case "NavigateAndAddEvent":
+                            {
+                                NavigateAndAddEvent navSearch = new NavigateAndAddEvent(testData);
+                                reportGenerator.addResult(navSearch.executeTest());
+                                numberOfTest++;
+                                break;
+                            }
+                            case "NavigateAndEditLocation":
+                            {
+                                NavigateAndEditLocation navEdit = new NavigateAndEditLocation(testData);
+                                reportGenerator.addResult(navEdit.executeTest());
+                                numberOfTest++;
+                                break;
+                            }
+                            case "MakeDeviceAvailable":
+                            {
+                                MakeDeviceAvailable avail = new MakeDeviceAvailable(testData);
+                                reportGenerator.addResult(avail.executeTest());
+                                numberOfTest++;
+                                break;
+                            }
+                            case "EditParameter":
+                            {
+                                EditParameterInLibrary editPara = new EditParameterInLibrary(testData);
+                                reportGenerator.addResult(editPara.executeTest());
+                                numberOfTest++;
+                                break;
+                            }
+                            case "CreateConfigGroup":
+                            {
+                                CreateConfigGroup configG = new CreateConfigGroup(testData);
+                                reportGenerator.addResult(configG.executeTest());
+                                numberOfTest++;
+                                break;
+                            }
+                            case "CompileConfig":
+                            {
+                                CompileConfig compileConfig = new CompileConfig(testData);
+                                reportGenerator.addResult(compileConfig.executeTest());
+                                numberOfTest++;
+                                break;
+                            }
+                            case "DownloadConfigFile":
+                            {
+                                DownloadConfigFile downloader = new DownloadConfigFile(testData);
+                                reportGenerator.addResult(downloader.executeTest());
                                 numberOfTest++;
                                 break;
                             }
