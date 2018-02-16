@@ -39,6 +39,7 @@ import KeywordDrivenTestFramework.Testing.TestClasses.Login.Navigate;
 import KeywordDrivenTestFramework.ConfigAdmin.NavigateToLibraries;
 import KeywordDrivenTestFramework.ConfigAdmin.Navigate_to_Templates;
 import KeywordDrivenTestFramework.ConfigAdmin.NavigateAndSearch;
+import KeywordDrivenTestFramework.FleetAdmin.ImportAsset;
 
 
 /**
@@ -258,6 +259,13 @@ public class TestMarshall extends BaseClass
                             {
                                 DownloadConfigFile downloader = new DownloadConfigFile(testData);
                                 reportGenerator.addResult(downloader.executeTest());
+                                numberOfTest++;
+                                break;
+                            }
+                            case "ImportAsset":
+                            {
+                                ImportAsset importer = new ImportAsset(testData);
+                                reportGenerator.addResult(importer.executeTest());
                                 numberOfTest++;
                                 break;
                             }
