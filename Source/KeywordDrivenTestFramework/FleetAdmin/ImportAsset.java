@@ -121,7 +121,7 @@ public class ImportAsset extends BaseClass{
         counter++;
         
         SeleniumDriverInstance.clickElementByXpath("//SPAN[@dmx-translate=''][text()='Refresh']");
-        pause(30000);
+        pause(1500);
         SeleniumDriverInstance.clickElementByXpath("//SPAN[@dmx-translate=''][text()='Refresh']");
         return new TestResult(testData, Enums.ResultStatus.PASS, "Successfully imported asset.", this.getTotalExecutionTime());
     }
