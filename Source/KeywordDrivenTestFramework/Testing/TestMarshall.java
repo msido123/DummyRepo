@@ -48,6 +48,7 @@ import KeywordDrivenTestFramework.FleetAdmin.CreateNewAsset;
 import KeywordDrivenTestFramework.Monitor.FleetAdmin.Assets.CheckDiagnosticWindowLoadInfo;
 import KeywordDrivenTestFramework.Monitor.FleetAdmin.Assets.ExportDiagnosticsInformation;
 import KeywordDrivenTestFramework.ConfigAdmin.NavigateAndSearch;
+import KeywordDrivenTestFramework.Monitor.FleetAdmin.Drivers.ImportDriver;
 
 
 /**
@@ -274,6 +275,13 @@ public class TestMarshall extends BaseClass
                             {
                                 ExportDiagnosticsInformation exportDiagnosticInfo = new ExportDiagnosticsInformation(testData);
                                 reportGenerator.addResult(exportDiagnosticInfo.executeTest());
+                                numberOfTest++;
+                                break;
+                            }
+                            case "ImportDriver":
+                            {
+                                ImportDriver importDriver = new ImportDriver(testData);
+                                reportGenerator.addResult(importDriver.executeTest());
                                 numberOfTest++;
                                 break;
                             }
