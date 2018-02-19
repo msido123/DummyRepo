@@ -22,7 +22,7 @@ public class ImportAssetTestPack{
     {
         ApplicationConfig appConfig = new ApplicationConfig();
         
-        instance.currentEnvironment = Enums.Environment.INT;  
+        instance.currentEnvironment = Enums.Environment.ENT;  
     }
      
     @Test
