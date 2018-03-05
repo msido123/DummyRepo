@@ -1,18 +1,5 @@
 package KeywordDrivenTestFramework.Testing;
 
-import KeywordDrivenTestFramework.ConfigAdmin.AddNewTemplate;
-import KeywordDrivenTestFramework.ConfigAdmin.CreateLocationTemplate;
-import KeywordDrivenTestFramework.ConfigAdmin.CreateMobileDeviceTemplate;
-import KeywordDrivenTestFramework.ConfigAdmin.DuplicateMobileDeviceTemplate;
-import KeywordDrivenTestFramework.ConfigAdmin.EditMobileDeviceTemplate;
-import KeywordDrivenTestFramework.ConfigAdmin.InputTextAndSearchOnFilter;
-import KeywordDrivenTestFramework.ConfigAdmin.CompileConfig;
-import KeywordDrivenTestFramework.ConfigAdmin.CreateConfigGroup;
-import KeywordDrivenTestFramework.ConfigAdmin.DownloadConfigFile;
-import KeywordDrivenTestFramework.ConfigAdmin.EditParameterInLibrary;
-import KeywordDrivenTestFramework.ConfigAdmin.MakeDeviceAvailable;
-import KeywordDrivenTestFramework.ConfigAdmin.NavigateAndAddEvent;
-import KeywordDrivenTestFramework.ConfigAdmin.NavigateAndEditLocation;
 import KeywordDrivenTestFramework.Core.BaseClass;
 import static KeywordDrivenTestFramework.Core.BaseClass.narrator;
 import KeywordDrivenTestFramework.Entities.Enums;
@@ -42,17 +29,8 @@ import KeywordDrivenTestFramework.Testing.TestClasses.Utilities.SelectBreadcrum;
 import KeywordDrivenTestFramework.Testing.TestClasses.Utilities.SelectDriver;
 import KeywordDrivenTestFramework.Testing.TestClasses.Login.Login_to_MixTelematicsEU;
 import KeywordDrivenTestFramework.Testing.TestClasses.Login.Navigate;
-import KeywordDrivenTestFramework.ConfigAdmin.NavigateToLibraries;
-import KeywordDrivenTestFramework.ConfigAdmin.Navigate_to_Templates;
-import KeywordDrivenTestFramework.FleetAdmin.CreateNewAsset;
 import KeywordDrivenTestFramework.Monitor.FleetAdmin.Assets.CheckDiagnosticWindowLoadInfo;
 import KeywordDrivenTestFramework.Monitor.FleetAdmin.Assets.ExportDiagnosticsInformation;
-import KeywordDrivenTestFramework.ConfigAdmin.NavigateAndSearch;
-<<<<<<< HEAD
-import KeywordDrivenTestFramework.Monitor.FleetAdmin.Drivers.ImportDriver;
-=======
-import KeywordDrivenTestFramework.FleetAdmin.ImportAsset;
->>>>>>> aeb54d6bd088a5bea51b974febdfc1f13539f8dd
 
 
 /**
@@ -204,70 +182,6 @@ public class TestMarshall extends BaseClass
                                 numberOfTest++;
                                 break;
                             }
-                            
-                            case "NavigateToTemplates":
-                            {
-                                Navigate_to_Templates navigateToTemplate = new Navigate_to_Templates(testData);
-                                reportGenerator.addResult(navigateToTemplate.executeTest());
-                                numberOfTest++;
-                                break;
-                            }
-                            case "NavigateToLibraries":
-                            {
-                                NavigateToLibraries navToLib = new NavigateToLibraries(testData);
-                                reportGenerator.addResult(navToLib.executeTest());
-                                numberOfTest++;
-                                break;
-                            }
-                            case "NavigateToEventTemplatePage":
-                            {
-                                InputTextAndSearchOnFilter inputAndSearch = new InputTextAndSearchOnFilter(testData);
-                                reportGenerator.addResult(inputAndSearch.executeTest());
-                                numberOfTest++;
-                                break;
-                            }
-                            case "AddNewTemplate":
-                            {
-                                AddNewTemplate addNewTempToEvents = new AddNewTemplate(testData);
-                                reportGenerator.addResult(addNewTempToEvents.executeTest());
-                                numberOfTest++;
-                                break;
-                            }
-                            case "CreateNewLocationTemplate":
-                            {
-                                CreateLocationTemplate createNewLocation = new CreateLocationTemplate(testData);
-                                 reportGenerator.addResult(createNewLocation.executeTest());
-                                numberOfTest++;
-                                break;
-                            }
-                            case "CreateMobileDeviceTemplate":
-                            {
-                                CreateMobileDeviceTemplate createMobileDeviceTemp = new CreateMobileDeviceTemplate(testData);
-                                reportGenerator.addResult(createMobileDeviceTemp.executeTest());
-                                numberOfTest++;
-                                break;
-                            }
-                            case "EditMobileDeviceTemplate":
-                            {
-                                EditMobileDeviceTemplate editMobileDeviceTemp = new EditMobileDeviceTemplate(testData);
-                                reportGenerator.addResult(editMobileDeviceTemp.executeTest());
-                                numberOfTest++;
-                                break;
-                            }
-                            case "DuplicateMobileDeviceTemplate":
-                            {
-                                DuplicateMobileDeviceTemplate duplicateMobileDeviceTemplate = new DuplicateMobileDeviceTemplate(testData);
-                                reportGenerator.addResult(duplicateMobileDeviceTemplate.executeTest());
-                                numberOfTest++;
-                                break;
-                            }
-                            case "CreateNewAsset":
-                            {
-                                CreateNewAsset createNewAsset = new CreateNewAsset(testData);
-                                reportGenerator.addResult(createNewAsset.executeTest());
-                                numberOfTest++;
-                                break;
-                            }
                             case "CheckDiagnosticWindowLoadInfo":
                             {
                                 CheckDiagnosticWindowLoadInfo checkDiagnosticWindow = new CheckDiagnosticWindowLoadInfo(testData);
@@ -279,77 +193,6 @@ public class TestMarshall extends BaseClass
                             {
                                 ExportDiagnosticsInformation exportDiagnosticInfo = new ExportDiagnosticsInformation(testData);
                                 reportGenerator.addResult(exportDiagnosticInfo.executeTest());
-                                numberOfTest++;
-                                break;
-                            }
-                            case "ImportDriver":
-                            {
-                                ImportDriver importDriver = new ImportDriver(testData);
-                                reportGenerator.addResult(importDriver.executeTest());
-                                numberOfTest++;
-                                break;
-                            }
-
-                            case "NavigateAndSearch":
-                            {
-                                NavigateAndSearch navSearch = new NavigateAndSearch(testData);
-                                reportGenerator.addResult(navSearch.executeTest());
-                                numberOfTest++;
-                                break;
-                            }
-                            case "NavigateAndAddEvent":
-                            {
-                                NavigateAndAddEvent navSearch = new NavigateAndAddEvent(testData);
-                                reportGenerator.addResult(navSearch.executeTest());
-                                numberOfTest++;
-                                break;
-                            }
-                            case "NavigateAndEditLocation":
-                            {
-                                NavigateAndEditLocation navEdit = new NavigateAndEditLocation(testData);
-                                reportGenerator.addResult(navEdit.executeTest());
-                                numberOfTest++;
-                                break;
-                            }
-                            case "MakeDeviceAvailable":
-                            {
-                                MakeDeviceAvailable avail = new MakeDeviceAvailable(testData);
-                                reportGenerator.addResult(avail.executeTest());
-                                numberOfTest++;
-                                break;
-                            }
-                            case "EditParameter":
-                            {
-                                EditParameterInLibrary editPara = new EditParameterInLibrary(testData);
-                                reportGenerator.addResult(editPara.executeTest());
-                                numberOfTest++;
-                                break;
-                            }
-                            case "CreateConfigGroup":
-                            {
-                                CreateConfigGroup configG = new CreateConfigGroup(testData);
-                                reportGenerator.addResult(configG.executeTest());
-                                numberOfTest++;
-                                break;
-                            }
-                            case "CompileConfig":
-                            {
-                                CompileConfig compileConfig = new CompileConfig(testData);
-                                reportGenerator.addResult(compileConfig.executeTest());
-                                numberOfTest++;
-                                break;
-                            }
-                            case "DownloadConfigFile":
-                            {
-                                DownloadConfigFile downloader = new DownloadConfigFile(testData);
-                                reportGenerator.addResult(downloader.executeTest());
-                                numberOfTest++;
-                                break;
-                            }
-                            case "ImportAsset":
-                            {
-                                ImportAsset importer = new ImportAsset(testData);
-                                reportGenerator.addResult(importer.executeTest());
                                 numberOfTest++;
                                 break;
                             }
