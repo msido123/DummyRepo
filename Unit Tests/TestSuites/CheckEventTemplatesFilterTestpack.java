@@ -8,35 +8,32 @@ package TestSuites;
 import KeywordDrivenTestFramework.Entities.Enums;
 import KeywordDrivenTestFramework.Testing.TestMarshall;
 import KeywordDrivenTestFramework.Utilities.ApplicationConfig;
-import static TestSuites.AddNewTemplateTestPack.instance;
 import java.io.FileNotFoundException;
 import org.junit.Test;
 
 /**
  *
- * @author MsimeleloG
+ * @author PhathuxoloJ
  */
-public class AddNewTemplateTestPack {
-    
+public class CheckEventTemplatesFilterTestpack {
     static TestMarshall instance;
     
-    public AddNewTemplateTestPack()
+    public CheckEventTemplatesFilterTestpack()
     {
         ApplicationConfig appConfig = new ApplicationConfig();
-        
         instance.currentEnvironment = Enums.Environment.INT;  
     }
      
     @Test
-    public void RunMixTelematicsAddNewTemplateTestPackIE() throws FileNotFoundException
+    public void RunMixTelematicsCheckEventTemplatesFilterTestPackIE() throws FileNotFoundException
     {
         System.out.println("Mix Telematics Test Pack");   
-        instance = new TestMarshall("TestPacks\\AddNewTemplateTestPack.xls", Enums.BrowserType.IE);
+        instance = new TestMarshall("TestPacks\\CheckEventTemplatesFilterTestPack.xlsx", Enums.BrowserType.IE);
         instance.runKeywordDrivenTests();
     }
  
     @Test
-    public void RunMixTelematicsAddNewTemplateTestPackChrome() throws FileNotFoundException
+    public void RunMixTelematicsCheckEventTemplatesFilterTestPackChrome() throws FileNotFoundException
     {
         System.out.println("Mix Telematics Test Pack");   
         instance = new TestMarshall("TestPacks\\CheckEventTemplatesFilterTestPack.xlsx", Enums.BrowserType.Chrome);
@@ -44,11 +41,10 @@ public class AddNewTemplateTestPack {
     }
     
     @Test
-    public void RunMixTelematicsAddNewTemplateTestPackFireFox() throws FileNotFoundException
+    public void RunMixTelematicsCheckEventTemplatesFilterTestPackFireFox() throws FileNotFoundException
     {
         System.out.println("Mix Telematics Test Pack");   
-        instance = new TestMarshall("TestPacks\\AddNewTemplateTestPack.xls", Enums.BrowserType.FireFox);
+        instance = new TestMarshall("TestPacks\\CheckEventTemplatesFilterTestPack.xlsx", Enums.BrowserType.FireFox);
         instance.runKeywordDrivenTests();
     }
-    
 }
