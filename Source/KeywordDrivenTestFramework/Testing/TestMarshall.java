@@ -1,6 +1,7 @@
 package KeywordDrivenTestFramework.Testing;
 
 import KeyDrivenTestframework.Manage.Templates.CheckTemplatesLoadInfo;
+import KeyDrivenTestframework.Manage.Templates.EventTemplates.CheckEventTemplatesFilter;
 import KeywordDrivenTestFramework.Core.BaseClass;
 import static KeywordDrivenTestFramework.Core.BaseClass.narrator;
 import KeywordDrivenTestFramework.Entities.Enums;
@@ -194,6 +195,13 @@ public class TestMarshall extends BaseClass
                             {
                                 CheckTemplatesLoadInfo checkTemplates = new CheckTemplatesLoadInfo(testData);
                                 reportGenerator.addResult(checkTemplates.executeTest());
+                                numberOfTest++;
+                                break;
+                            }
+                            case "CheckEventTemplatesFilter":
+                            {
+                                CheckEventTemplatesFilter checkTempFilter = new CheckEventTemplatesFilter(testData);
+                                reportGenerator.addResult(checkTempFilter.executeTest());
                                 numberOfTest++;
                                 break;
                             }
