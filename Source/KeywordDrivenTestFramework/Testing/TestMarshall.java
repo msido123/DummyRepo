@@ -1,5 +1,6 @@
 package KeywordDrivenTestFramework.Testing;
 
+import KeyDrivenTestframework.Manage.Templates.CheckTemplatesLoadInfo;
 import KeywordDrivenTestFramework.Core.BaseClass;
 import static KeywordDrivenTestFramework.Core.BaseClass.narrator;
 import KeywordDrivenTestFramework.Entities.Enums;
@@ -186,6 +187,13 @@ public class TestMarshall extends BaseClass
                             {
                                 CheckDiagnosticWindowLoadInfo checkDiagnosticWindow = new CheckDiagnosticWindowLoadInfo(testData);
                                 reportGenerator.addResult(checkDiagnosticWindow.executeTest());
+                                numberOfTest++;
+                                break;
+                            }
+                            case "CheckTemplatesLoadInfo":
+                            {
+                                CheckTemplatesLoadInfo checkTemplates = new CheckTemplatesLoadInfo(testData);
+                                reportGenerator.addResult(checkTemplates.executeTest());
                                 numberOfTest++;
                                 break;
                             }
