@@ -26,7 +26,7 @@ public class InputTextAndSearchOnFilterTestPack {
     {
         ApplicationConfig appConfig = new ApplicationConfig();
         
-        instance.currentEnvironment = Enums.Environment.INT;  
+        TestMarshall.currentEnvironment = Enums.Environment.INT;  
     }
      
     @Test
@@ -41,7 +41,7 @@ public class InputTextAndSearchOnFilterTestPack {
     public void RunMixTelematicsInputTextAndSearchOnFilterTestPackChrome() throws FileNotFoundException
     {
         System.out.println("Mix Telematics Test Pack");   
-        instance = new TestMarshall("TestPacks\\InputTextAndSearchOnFilterTestPack.xlsx", Enums.BrowserType.Chrome);
+        instance = new TestMarshall("TestPacks\\CheckEventTemplateFilterZeeTestPack.xlsx", Enums.BrowserType.Chrome);
         instance.runKeywordDrivenTests();
     }
     

@@ -7,6 +7,8 @@ import static KeywordDrivenTestFramework.Entities.Enums.Environment.*;
 import KeywordDrivenTestFramework.Entities.TestEntity;
 import KeywordDrivenTestFramework.Entities.TestResult;
 import static KeywordDrivenTestFramework.Core.BaseClass.reportGenerator;
+import KeywordDrivenTestFramework.Manage.Templates.CheckingEventTemplateFilter;
+import KeywordDrivenTestFramework.Manage.Templates.CheckTemplatesLoadInfoZee;
 import KeywordDrivenTestFramework.Reporting.Narrator;
 import KeywordDrivenTestFramework.Reporting.ReportGenerator;
 import KeywordDrivenTestFramework.Reporting.TestReportEmailerUtility;
@@ -189,6 +191,22 @@ public class TestMarshall extends BaseClass
                                 numberOfTest++;
                                 break;
                             }
+
+                            case "CheckTemplatesLoadInfoZee":
+                            {
+                                CheckTemplatesLoadInfoZee checkTemplates = new  CheckTemplatesLoadInfoZee(testData);
+                                reportGenerator.addResult(checkTemplates.executeTest());
+                                numberOfTest++;
+                                break;
+                            }
+                            case "CheckingEventTemplateFilter":
+                            {
+                                CheckingEventTemplateFilter checkEventTemplate = new  CheckingEventTemplateFilter(testData);
+                                reportGenerator.addResult(checkEventTemplate.executeTest());
+                                numberOfTest++;
+                                break;
+                            }                            
+                            
                             case "ExportDiagnosticsInformation":
                             {
                                 ExportDiagnosticsInformation exportDiagnosticInfo = new ExportDiagnosticsInformation(testData);
