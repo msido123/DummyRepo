@@ -64,7 +64,7 @@ public class CheckEventTemplatesFilter extends BaseClass{
             narrator.failedMessage("Failed to click text filter - "+errorMessage);
             return new TestResult(testData, Enums.ResultStatus.FAIL, "Failed to click text filter", this.getTotalExecutionTime());
         }
-        if(!method.typeTextInFilter()) {
+        if(!method.typeTextInFilter("Default event template for MiX2310i")) {
             
             SeleniumDriverInstance.takeScreenShot(counter + " - Failed to enter text in event template filter", true);
             counter++;
