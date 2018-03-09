@@ -38,7 +38,7 @@ public class AddNewEventTemplate extends BaseClass{
             narrator.failedMessage("Failed to click on Manage Tab - "+errorMessage);
             return new TestResult(testData, Enums.ResultStatus.FAIL, "Failed to click on Manage Tab", this.getTotalExecutionTime());
         }
-        
+        pause(1000);
         if(!run.navigateToTemplatesTab()) {
             
             SeleniumDriverInstance.takeScreenShot(counter + " - Failed to click on Templates Tab", true);
@@ -46,6 +46,7 @@ public class AddNewEventTemplate extends BaseClass{
             narrator.failedMessage("Failed to click on Templates Tab - "+errorMessage);
             return new TestResult(testData, Enums.ResultStatus.FAIL, "Failed to click on Templates Tab", this.getTotalExecutionTime());
         }
+        pause(1000);
          if(!run.navigateToEventTemplates()) {
             
             SeleniumDriverInstance.takeScreenShot(counter + " - Failed to click on Event Templates Tab", true);
@@ -83,13 +84,13 @@ public class AddNewEventTemplate extends BaseClass{
             narrator.failedMessage("Failed to click select event button - "+errorMessage);
             return new TestResult(testData, Enums.ResultStatus.FAIL, "Failed to click select event button", this.getTotalExecutionTime());
         }
-//         if(!methods.clickFilter()) {
-//            
-//            SeleniumDriverInstance.takeScreenShot(counter + " - Failed to click filter", true);
-//            counter++;
-//            narrator.failedMessage("Failed to click filter- "+errorMessage);
-//            return new TestResult(testData, Enums.ResultStatus.FAIL, "Failed to click filter", this.getTotalExecutionTime());
-//        }
+         if(!methods.clickFilter()) {
+            
+            SeleniumDriverInstance.takeScreenShot(counter + " - Failed to click filter", true);
+            counter++;
+            narrator.failedMessage("Failed to click filter- "+errorMessage);
+            return new TestResult(testData, Enums.ResultStatus.FAIL, "Failed to click filter", this.getTotalExecutionTime());
+        }
         if(!methods.addTextToFilter("Over speeding")) {
             
             SeleniumDriverInstance.takeScreenShot(counter + " - Failed to add text to filter", true);
@@ -152,6 +153,14 @@ public class AddNewEventTemplate extends BaseClass{
             counter++;
             narrator.failedMessage("Failed to enter text in event template filter - "+errorMessage);
             return new TestResult(testData, Enums.ResultStatus.FAIL, "Failed to enter text in event template filter", this.getTotalExecutionTime());
+        }
+        pause(1000);
+        if(!methods.extractParameters()) {
+            
+            SeleniumDriverInstance.takeScreenShot(counter + " - Failed to extract parameters from the event template", true);
+            counter++;
+            narrator.failedMessage("Failed to extract parameters from the event template - "+errorMessage);
+            return new TestResult(testData, Enums.ResultStatus.FAIL, "Failed to extract parameters from the event template", this.getTotalExecutionTime());
         }
         pause(1000);
         if(!methods.clickDropDownMenu()) {

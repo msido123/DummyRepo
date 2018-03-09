@@ -121,12 +121,12 @@ public class AddNewEventMethods extends AddNewEventTemplate{
         String extractedEvent = SeleniumDriverInstance.retrieveTextByXpath("(//DIV)[113]");
         if(!(extractedEvent.contains(textToCompare))){
             errorMessage = "There are events returned";
-            testData.extractParameter("Event template name", extractedEvent, "FAIL");
+            testData.extractParameter("Event", extractedEvent, "FAIL");
             SeleniumDriverInstance.takeScreenShot("Compared values are not the same", false);
             counter++;
             return false;
         }
-        testData.extractParameter("Event template name", extractedEvent, "PASS");
+        testData.extractParameter("Event", extractedEvent, "PASS");
         SeleniumDriverInstance.takeScreenShot("Compared values are the same", false);
         counter++;
         return true;
@@ -156,6 +156,24 @@ public class AddNewEventMethods extends AddNewEventTemplate{
         return true;
     }
     
+    public boolean extractParameters(){
+        if(!SeleniumDriverInstance.waitForElementByXpath("//A[@class='clickable-cell ng-scope']") || 
+           !SeleniumDriverInstance.waitForElementByXpath("(//DIV)[104]") || 
+           !SeleniumDriverInstance.waitForElementByXpath("(//TD[@ng-repeat='column in filteredColumns'])[3]")){
+           
+           errorMessage = "the is no data in the table";
+           return false;
+        }
+        
+        testData.extractParameter("Event template name",SeleniumDriverInstance.retrieveTextByXpath("//A[@class='clickable-cell ng-scope']"), "PASS");
+        testData.extractParameter("Asset count", SeleniumDriverInstance.retrieveTextByXpath("(//DIV)[104]"), "PASS");
+        testData.extractParameter("Config. group count", SeleniumDriverInstance.retrieveTextByXpath("(//TD[@ng-repeat='column in filteredColumns'])[3]"), "PASS");
+        SeleniumDriverInstance.takeScreenShot("Event template data has been extracted successfully", false);
+        counter++;
+        return true;
+        
+    }
+    
     public boolean clickDropDownMenu(){
         if(!SeleniumDriverInstance.waitForElementByXpath("(//A[@fleet-tooltip='Actions'])[1]")) {    
             errorMessage = "The drop down menu is not clicked";
@@ -169,11 +187,13 @@ public class AddNewEventMethods extends AddNewEventTemplate{
     }
     
    public boolean clickRemoveOnDropDownMenu(){
-        if(!SeleniumDriverInstance.waitForElementByXpath("/html/body/ul[2]/li[3]/a")) {    
+        if(!SeleniumDriverInstance.waitForElementByXpath("(//li[@class='ng-scope'][3])[15]")) {    
             errorMessage = "The remove action is not clicked";
             return false;
         } 
-        SeleniumDriverInstance.clickElementByXpath("/html/body/ul[2]/li[3]/a");
+        SeleniumDriverInstance.clickElementByXpath("(//li[@class='ng-scope'][3])[15]");
+        pause(1000);
+        SeleniumDriverInstance.clickElementByXpath("//BUTTON[@ng-show='$modal.okayButton'][text()='Remove']");
         errorMessage = "The remove action is clicked successfully";
         SeleniumDriverInstance.takeScreenShot(counter + "- The remove action is clicked successfully -", false);
         counter++; 
