@@ -15,25 +15,25 @@ import org.junit.Test;
  *
  * @author PhathuxoloJ
  */
-public class CheckEventTemplatesFilterTestpack {
+public class AddNewEventTemplateTestPack {
     static TestMarshall instance;
     
-    public CheckEventTemplatesFilterTestpack()
+    public AddNewEventTemplateTestPack()
     {
         ApplicationConfig appConfig = new ApplicationConfig();
         instance.currentEnvironment = Enums.Environment.INT;  
     }
      
     @Test
-    public void RunMixTelematicsCheckEventTemplatesFilterTestPackIE() throws FileNotFoundException
+    public void RunMixTelematicsAddNewEventTemplateTestPackIE() throws FileNotFoundException
     {
         System.out.println("Mix Telematics Test Pack");   
-        instance = new TestMarshall("TestPacks\\CheckEventTemplatesFilterTestPack.xlsx", Enums.BrowserType.IE);
+        instance = new TestMarshall("TestPacks\\AddNewEventTemplateTestPack.xlsx", Enums.BrowserType.IE);
         instance.runKeywordDrivenTests();
     }
  
     @Test
-    public void RunMixTelematicsCheckEventTemplatesFilterTestPackChrome() throws FileNotFoundException
+    public void RunMixTelematicsAddNewEventTemplateTestPackChrome() throws FileNotFoundException
     {
         System.out.println("Mix Telematics Test Pack");   
         instance = new TestMarshall("TestPacks\\AddNewEventTemplateTestPack.xlsx", Enums.BrowserType.Chrome);
@@ -41,10 +41,10 @@ public class CheckEventTemplatesFilterTestpack {
     }
     
     @Test
-    public void RunMixTelematicsCheckEventTemplatesFilterTestPackFireFox() throws FileNotFoundException
+    public void RunMixTelematicsAddNewEventTemplateTestPackFireFox() throws FileNotFoundException
     {
         System.out.println("Mix Telematics Test Pack");   
-        instance = new TestMarshall("TestPacks\\CheckEventTemplatesFilterTestPack.xlsx", Enums.BrowserType.FireFox);
+        instance = new TestMarshall("TestPacks\\AddNewEventTemplateTestPack.xlsx", Enums.BrowserType.FireFox);
         instance.runKeywordDrivenTests();
     }
 }

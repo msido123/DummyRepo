@@ -29,12 +29,12 @@ public class CheckEventFilterMethods extends CheckEventTemplatesFilter{
         counter++; 
         return true;
     }
-     public boolean typeTextInFilter(){
+     public boolean typeTextInFilter(String textToAdd){
          if(!SeleniumDriverInstance.waitForElementByXpath("(//INPUT[@type='text'])[1]")) {    
             errorMessage = "The Event Template Filter did not load";
             return false;
         } 
-        SeleniumDriverInstance.EnterTextByXpath("(//INPUT[@type='text'])[1]", "Default event template for MiX2310i");
+        SeleniumDriverInstance.EnterTextByXpath("(//INPUT[@type='text'])[1]", textToAdd);
         errorMessage = "text added successfully";
         SeleniumDriverInstance.takeScreenShot(counter + "- text added successfully -", false);
         counter++; 
