@@ -11,6 +11,9 @@ import static KeywordDrivenTestFramework.Entities.Enums.Environment.*;
 import KeywordDrivenTestFramework.Entities.TestEntity;
 import KeywordDrivenTestFramework.Entities.TestResult;
 import static KeywordDrivenTestFramework.Core.BaseClass.reportGenerator;
+import KeywordDrivenTestFramework.Manage.Templates.CheckingEventTemplateFilter;
+import KeywordDrivenTestFramework.Manage.Templates.CheckTemplatesLoadInfoZee;
+import KeywordDrivenTestFramework.Manage.Libraries.AddingNewEventToSystem;
 import KeywordDrivenTestFramework.Reporting.Narrator;
 import KeywordDrivenTestFramework.Reporting.ReportGenerator;
 import KeywordDrivenTestFramework.Reporting.TestReportEmailerUtility;
@@ -193,40 +196,36 @@ public class TestMarshall extends BaseClass
                                 numberOfTest++;
                                 break;
                             }
-                            case "CheckTemplatesLoadInfo":
+
+                            case "CheckTemplatesLoadInfoZee":
                             {
-                                CheckTemplatesLoadInfo checkTemplates = new CheckTemplatesLoadInfo(testData);
+                                CheckTemplatesLoadInfoZee checkTemplates = new  CheckTemplatesLoadInfoZee(testData);
                                 reportGenerator.addResult(checkTemplates.executeTest());
                                 numberOfTest++;
                                 break;
                             }
-                            case "CheckEventTemplatesFilter":
+                            case "CheckingEventTemplateFilter":
                             {
-                                CheckEventTemplatesFilter checkTempFilter = new CheckEventTemplatesFilter(testData);
-                                reportGenerator.addResult(checkTempFilter.executeTest());
+                                CheckingEventTemplateFilter checkEventTemplate = new  CheckingEventTemplateFilter(testData);
+                                reportGenerator.addResult(checkEventTemplate.executeTest());
                                 numberOfTest++;
                                 break;
-                            }
-                            case "AddNewEventTemplate":
-                            {
-                                AddNewEventTemplate eventTemplate = new AddNewEventTemplate(testData);
-                                reportGenerator.addResult(eventTemplate.executeTest());
-                                numberOfTest++;
-                                break;
-                            }
-                            case "DownloadImportTemplate":
-                            {
-                                DownloadImportTemplate downloadTemplate = new DownloadImportTemplate(testData);
-                                reportGenerator.addResult(downloadTemplate.runTest());
-                                numberOfTest++;
-                                break;
-                            }
+                            }                            
+                            
                             case "ExportDiagnosticsInformation":
                             {
                                 ExportDiagnosticsInformation exportDiagnosticInfo = new ExportDiagnosticsInformation(testData);
                                 reportGenerator.addResult(exportDiagnosticInfo.executeTest());
                                 numberOfTest++;
                                 break;
+                            }
+                            case "AddingNewEventToSystem":
+                            {
+                                AddingNewEventToSystem addNewEventObject = new AddingNewEventToSystem(testData);
+                                reportGenerator.addResult(addNewEventObject.executeTest());
+                                numberOfTest++;
+                                break;
+                          
                             }
                             case "Navigate":
                             {

@@ -3,11 +3,22 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
+<<<<<<< HEAD
+            <file>file:/C:/Users/ZiyandaP/Documents/Dummy/DummyRepo/Source/KeywordDrivenTestFramework/Testing/TestMarshall.java</file>
+            <file>file:/C:/Users/ZiyandaP/Documents/Dummy/DummyRepo/Source/KeywordDrivenTestFramework/Entities/TestResult.java</file>
+            <file>file:/C:/Users/ZiyandaP/Documents/Dummy/DummyRepo/Source/KeywordDrivenTestFramework/Manage/Libraries/AddingNewEventToSystem.java</file>
+            <file>file:/C:/Users/ZiyandaP/Documents/Dummy/DummyRepo/Source/KeywordDrivenTestFramework/Manage/Templates/CheckTemplatesLoadInfoZee.java</file>
+            <file>file:/C:/Users/ZiyandaP/Documents/Dummy/DummyRepo/Source/KeywordDrivenTestFramework/Manage/Templates/CheckingEventTemplateFilter.java</file>
+            <file>file:/C:/Users/ZiyandaP/Documents/Dummy/DummyRepo/Source/KeywordDrivenTestFramework/Monitor/FleetAdmin/Assets/CheckDiagnosticWindowLoadInfo.java</file>
+            <file>file:/C:/Users/ZiyandaP/Documents/Dummy/DummyRepo/Source/KeywordDrivenTestFramework/Entities/Enums.java</file>
+            <file>file:/C:/Users/ZiyandaP/Documents/Dummy/DummyRepo/Unit%20Tests/TestSuites/AddNewEventTestPack.java</file>
+=======
             <file>file:/C:/Users/phathuxoloj/Documents/projects/DummyRepo/Source/KeyDrivenTestframework/Manage/Libraries/LocationLibrary/DownloadImportTemplate.java</file>
             <file>file:/C:/Users/phathuxoloj/Documents/projects/DummyRepo/Source/KeyDrivenTestframework/Manage/Templates/EventTemplates/AddNewEventTemplate.java</file>
             <file>file:/C:/Users/phathuxoloj/Documents/projects/DummyRepo/Source/KeywordDrivenTestFramework/Utilities/SeleniumDriverUtility.java</file>
             <file>file:/C:/Users/phathuxoloj/Documents/projects/DummyRepo/Source/KeyDrivenTestframework/Manage/Templates/CheckTemplatesLoadInfo.java</file>
             <file>file:/C:/Users/phathuxoloj/Documents/projects/DummyRepo/Source/KeyDrivenTestframework/Manage/Libraries/LocationLibrary/DownloadImportTemplateMethods.java</file>
+>>>>>>> 7cc5941ed4bca2be830907dc67b4b58ac6d8b878
         </group>
     </open-files>
 </project-private>

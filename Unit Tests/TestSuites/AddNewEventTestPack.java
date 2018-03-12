@@ -8,48 +8,47 @@ package TestSuites;
 import KeywordDrivenTestFramework.Entities.Enums;
 import KeywordDrivenTestFramework.Testing.TestMarshall;
 import KeywordDrivenTestFramework.Utilities.ApplicationConfig;
-import static TestSuites.Navigate_to_TemplateTestPack.instance;
+import static TestSuites.AddNewTemplateTestPack.instance;
 import java.io.FileNotFoundException;
 import org.junit.Test;
 
-
-
 /**
  *
- * @author MsimeleloG
+ * @author ZiyandaP
  */
-public class InputTextAndSearchOnFilterTestPack {
+public class AddNewEventTestPack {
     
     static TestMarshall instance;
     
-    public InputTextAndSearchOnFilterTestPack()
+    public AddNewEventTestPack()
     {
         ApplicationConfig appConfig = new ApplicationConfig();
         
-        TestMarshall.currentEnvironment = Enums.Environment.INT;  
+        instance.currentEnvironment = Enums.Environment.UAT;  
     }
      
     @Test
-    public void RunMixTelematicsInputTextAndSearchOnFilterTestPackIE() throws FileNotFoundException
+    public void RunMixTelematicsAddNewTemplateTestPackIE() throws FileNotFoundException
     {
         System.out.println("Mix Telematics Test Pack");   
-        instance = new TestMarshall("TestPacks\\InputTextAndSearchOnFilterTestPack.xls", Enums.BrowserType.IE);
+        instance = new TestMarshall("TestPacks\\AddNewTemplateTestPack.xls", Enums.BrowserType.IE);
         instance.runKeywordDrivenTests();
     }
  
     @Test
-    public void RunMixTelematicsInputTextAndSearchOnFilterTestPackChrome() throws FileNotFoundException
+    public void RunMixTelematicsAddNewTemplateTestPackChrome() throws FileNotFoundException
     {
         System.out.println("Mix Telematics Test Pack");   
-        instance = new TestMarshall("TestPacks\\CheckEventTemplateFilterZeeTestPack.xlsx", Enums.BrowserType.Chrome);
+        instance = new TestMarshall("TestPacks\\AddingNewEventToSystemTestPack.xlsx", Enums.BrowserType.Chrome);
         instance.runKeywordDrivenTests();
     }
     
     @Test
-    public void RunMixTelematicsInputTextAndSearchOnFilterTestPackFireFox() throws FileNotFoundException
+    public void RunMixTelematicsAddNewTemplateTestPackFireFox() throws FileNotFoundException
     {
         System.out.println("Mix Telematics Test Pack");   
-        instance = new TestMarshall("TestPacks\\InputTextAndSearchOnFilterTestPack.xls", Enums.BrowserType.FireFox);
+        instance = new TestMarshall("TestPacks\\AddNewTemplateTestPack.xls", Enums.BrowserType.FireFox);
         instance.runKeywordDrivenTests();
     }
+    
 }
