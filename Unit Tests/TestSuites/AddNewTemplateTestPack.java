@@ -39,7 +39,11 @@ public class AddNewTemplateTestPack {
     public void RunMixTelematicsAddNewTemplateTestPackChrome() throws FileNotFoundException
     {
         System.out.println("Mix Telematics Test Pack");   
+<<<<<<< HEAD
         instance = new TestMarshall("TestPacks\\CheckingEventTemplateFilterTestPack.xlsx", Enums.BrowserType.Chrome);
+=======
+        instance = new TestMarshall("TestPacks\\CheckEventTemplatesFilterTestPack.xlsx", Enums.BrowserType.Chrome);
+>>>>>>> 7cc5941ed4bca2be830907dc67b4b58ac6d8b878
         instance.runKeywordDrivenTests();
     }
     

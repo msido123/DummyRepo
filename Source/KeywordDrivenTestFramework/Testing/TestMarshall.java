@@ -1,5 +1,9 @@
 package KeywordDrivenTestFramework.Testing;
 
+import KeyDrivenTestframework.Manage.Libraries.LocationLibrary.DownloadImportTemplate;
+import KeyDrivenTestframework.Manage.Templates.CheckTemplatesLoadInfo;
+import KeyDrivenTestframework.Manage.Templates.EventTemplates.AddNewEventTemplate;
+import KeyDrivenTestframework.Manage.Templates.EventTemplates.CheckEventTemplatesFilter;
 import KeywordDrivenTestFramework.Core.BaseClass;
 import static KeywordDrivenTestFramework.Core.BaseClass.narrator;
 import KeywordDrivenTestFramework.Entities.Enums;

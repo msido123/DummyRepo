@@ -8,45 +8,44 @@ package TestSuites;
 import KeywordDrivenTestFramework.Entities.Enums;
 import KeywordDrivenTestFramework.Testing.TestMarshall;
 import KeywordDrivenTestFramework.Utilities.ApplicationConfig;
+import static TestSuites.DownloadImportTemplateTestPack.instance;
 import java.io.FileNotFoundException;
 import org.junit.Test;
 
 /**
  *
- * @author MsimeleloG
+ * @author PhathuxoloJ
  */
-public class CheckDiagnosticWindowLoadInfoTestPack {
-    
+public class DownloadImportTemplateTestPack {
     static TestMarshall instance;
     
-    public CheckDiagnosticWindowLoadInfoTestPack()
+    public DownloadImportTemplateTestPack()
     {
         ApplicationConfig appConfig = new ApplicationConfig();
-        
         instance.currentEnvironment = Enums.Environment.INT;  
     }
      
     @Test
-    public void RunMixTelematicsCheckDiagnosticWindowLoadInfoTestPackIE() throws FileNotFoundException
+    public void RunMixTelematicsDownloadImportTemplateTestPackIE() throws FileNotFoundException
     {
         System.out.println("Mix Telematics Test Pack");   
-        instance = new TestMarshall("TestPacks\\CheckDiagnosticWindowLoadInfoTestPack.xls", Enums.BrowserType.IE);
+        instance = new TestMarshall("TestPacks\\DownloadImportTemplateTestPack.xlsx", Enums.BrowserType.IE);
         instance.runKeywordDrivenTests();
     }
  
     @Test
-    public void RunMixTelematicsCheckDiagnosticWindowLoadInfoTestPackChrome() throws FileNotFoundException
+    public void RunMixTelematicsDownloadImportTemplateTestPackChrome() throws FileNotFoundException
     {
         System.out.println("Mix Telematics Test Pack");   
-        instance = new TestMarshall("TestPacks\\CheckTemplatesLoadInfoTestPack.xlsx", Enums.BrowserType.Chrome);
+        instance = new TestMarshall("TestPacks\\DownloadImportTemplateTestPack.xlsx", Enums.BrowserType.Chrome);
         instance.runKeywordDrivenTests();
     }
     
     @Test
-    public void RunMixTelematicsCheckDiagnosticWindowLoadInfoTestPackFireFox() throws FileNotFoundException
+    public void RunMixTelematicsDownloadImportTemplateTestPackFireFox() throws FileNotFoundException
     {
         System.out.println("Mix Telematics Test Pack");   
-        instance = new TestMarshall("TestPacks\\CheckDiagnosticWindowLoadInfoTestPack.xls", Enums.BrowserType.FireFox);
+        instance = new TestMarshall("TestPacks\\DownloadImportTemplateTestPack.xlsx", Enums.BrowserType.FireFox);
         instance.runKeywordDrivenTests();
     }
 }
