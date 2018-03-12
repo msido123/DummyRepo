@@ -9,6 +9,7 @@ import KeywordDrivenTestFramework.Entities.TestResult;
 import static KeywordDrivenTestFramework.Core.BaseClass.reportGenerator;
 import KeywordDrivenTestFramework.Manage.Templates.CheckingEventTemplateFilter;
 import KeywordDrivenTestFramework.Manage.Templates.CheckTemplatesLoadInfoZee;
+import KeywordDrivenTestFramework.Manage.Libraries.AddingNewEventToSystem;
 import KeywordDrivenTestFramework.Reporting.Narrator;
 import KeywordDrivenTestFramework.Reporting.ReportGenerator;
 import KeywordDrivenTestFramework.Reporting.TestReportEmailerUtility;
@@ -213,6 +214,14 @@ public class TestMarshall extends BaseClass
                                 reportGenerator.addResult(exportDiagnosticInfo.executeTest());
                                 numberOfTest++;
                                 break;
+                            }
+                            case "AddingNewEventToSystem":
+                            {
+                                AddingNewEventToSystem addNewEventObject = new AddingNewEventToSystem(testData);
+                                reportGenerator.addResult(addNewEventObject.executeTest());
+                                numberOfTest++;
+                                break;
+                          
                             }
                             case "Navigate":
                             {
