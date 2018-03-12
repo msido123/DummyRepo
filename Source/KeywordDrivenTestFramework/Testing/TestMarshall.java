@@ -1,5 +1,6 @@
 package KeywordDrivenTestFramework.Testing;
 
+import KeyDrivenTestframework.Manage.Libraries.LocationLibrary.DownloadImportTemplate;
 import KeyDrivenTestframework.Manage.Templates.CheckTemplatesLoadInfo;
 import KeyDrivenTestframework.Manage.Templates.EventTemplates.AddNewEventTemplate;
 import KeyDrivenTestframework.Manage.Templates.EventTemplates.CheckEventTemplatesFilter;
@@ -210,6 +211,13 @@ public class TestMarshall extends BaseClass
                             {
                                 AddNewEventTemplate eventTemplate = new AddNewEventTemplate(testData);
                                 reportGenerator.addResult(eventTemplate.executeTest());
+                                numberOfTest++;
+                                break;
+                            }
+                            case "DownloadImportTemplate":
+                            {
+                                DownloadImportTemplate downloadTemplate = new DownloadImportTemplate(testData);
+                                reportGenerator.addResult(downloadTemplate.runTest());
                                 numberOfTest++;
                                 break;
                             }
