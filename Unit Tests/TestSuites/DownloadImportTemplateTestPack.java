@@ -8,6 +8,7 @@ package TestSuites;
 import KeywordDrivenTestFramework.Entities.Enums;
 import KeywordDrivenTestFramework.Testing.TestMarshall;
 import KeywordDrivenTestFramework.Utilities.ApplicationConfig;
+import static TestSuites.DownloadImportTemplateTestPack.instance;
 import java.io.FileNotFoundException;
 import org.junit.Test;
 

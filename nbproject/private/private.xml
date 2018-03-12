@@ -3,12 +3,11 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/phathuxoloj/Documents/projects/DummyRepo/Source/KeyDrivenTestframework/Manage/Templates/EventTemplates/AddNewEventMethods.java</file>
+            <file>file:/C:/Users/phathuxoloj/Documents/projects/DummyRepo/Source/KeyDrivenTestframework/Manage/Libraries/LocationLibrary/DownloadImportTemplate.java</file>
             <file>file:/C:/Users/phathuxoloj/Documents/projects/DummyRepo/Source/KeyDrivenTestframework/Manage/Templates/EventTemplates/AddNewEventTemplate.java</file>
-            <file>file:/C:/Users/phathuxoloj/Documents/projects/DummyRepo/Source/KeyDrivenTestframework/Manage/Templates/EventTemplates/CheckEventTemplatesFilter.java</file>
-            <file>file:/C:/Users/phathuxoloj/Documents/projects/DummyRepo/Source/KeyDrivenTestframework/Manage/Templates/EventTemplates/CheckEventFilterMethods.java</file>
-            <file>file:/C:/Users/phathuxoloj/Documents/projects/DummyRepo/Unit%20Tests/TestSuites/CheckEventTemplatesFilterTestpack.java</file>
-            <file>file:/C:/Users/phathuxoloj/Documents/projects/DummyRepo/Source/KeywordDrivenTestFramework/Testing/TestMarshall.java</file>
+            <file>file:/C:/Users/phathuxoloj/Documents/projects/DummyRepo/Source/KeywordDrivenTestFramework/Utilities/SeleniumDriverUtility.java</file>
+            <file>file:/C:/Users/phathuxoloj/Documents/projects/DummyRepo/Source/KeyDrivenTestframework/Manage/Templates/CheckTemplatesLoadInfo.java</file>
+            <file>file:/C:/Users/phathuxoloj/Documents/projects/DummyRepo/Source/KeyDrivenTestframework/Manage/Libraries/LocationLibrary/DownloadImportTemplateMethods.java</file>
         </group>
     </open-files>
 </project-private>
