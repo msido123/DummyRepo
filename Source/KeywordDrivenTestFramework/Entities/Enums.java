@@ -116,7 +116,7 @@ public class Enums
         OMAN("https://om.mixtelematics.com","http://mailinator.com/"),
         ENT("https://ent.mixtelematics.com/#/login","http://mailinator.com/"),
         AU("https://au.mixtelematics.com","http://mailinator.com/"),
-        ALG("https://alg.mixtelematics.com/","http://mailinator.com/"), 
+        ALG("https://alg.mixtelematics.com/","http://mailinator.com/"), AUT, 
         ;
         
         

@@ -6,6 +6,7 @@
 package TestSuites;
 
 import KeywordDrivenTestFramework.Entities.Enums;
+import static KeywordDrivenTestFramework.Entities.Enums.Environment.UAT;
 import KeywordDrivenTestFramework.Testing.TestMarshall;
 import KeywordDrivenTestFramework.Utilities.ApplicationConfig;
 import static TestSuites.AddNewTemplateTestPack.instance;
@@ -14,17 +15,17 @@ import org.junit.Test;
 
 /**
  *
- * @author MsimeleloG
+ * @author ZiyandaP
  */
-public class AddNewTemplateTestPack {
+public class VerifyingExcelFilesTestPack {
     
     static TestMarshall instance;
     
-    public AddNewTemplateTestPack()
+    public VerifyingExcelFilesTestPack()
     {
         ApplicationConfig appConfig = new ApplicationConfig();
         
-        instance.currentEnvironment = Enums.Environment.INT;  
+        TestMarshall.currentEnvironment = Enums.Environment.UAT;  
     }
      
     @Test
@@ -39,8 +40,7 @@ public class AddNewTemplateTestPack {
     public void RunMixTelematicsAddNewTemplateTestPackChrome() throws FileNotFoundException
     {
         System.out.println("Mix Telematics Test Pack");   
-
-        instance = new TestMarshall("TestPacks\\CheckingEventTemplateFilterTestPack.xlsx", Enums.BrowserType.Chrome);
+        instance = new TestMarshall("TestPacks\\VerifyingDownloadedExcelFilesTestPack.xlsx", Enums.BrowserType.Chrome);
         instance.runKeywordDrivenTests();
     }
     

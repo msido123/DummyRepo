@@ -14,6 +14,8 @@ import static KeywordDrivenTestFramework.Core.BaseClass.reportGenerator;
 import KeywordDrivenTestFramework.Manage.Templates.CheckingEventTemplateFilter;
 import KeywordDrivenTestFramework.Manage.Templates.CheckTemplatesLoadInfoZee;
 import KeywordDrivenTestFramework.Manage.Libraries.AddingNewEventToSystem;
+import KeyDrivenTestframework.Manage.Libraries.LocationLibrary.CanEditLocation;
+import KeywordDrivenTestFramework.Monitor.FleetAdmin.Assets.VerifyingDownloadedExcelFiles;
 import KeywordDrivenTestFramework.Reporting.Narrator;
 import KeywordDrivenTestFramework.Reporting.ReportGenerator;
 import KeywordDrivenTestFramework.Reporting.TestReportEmailerUtility;
@@ -227,6 +229,21 @@ public class TestMarshall extends BaseClass
                                 break;
                           
                             }
+                            case "CanEditLocation":
+                            {
+                                CanEditLocation editLocaObject = new CanEditLocation(testData);
+                                reportGenerator.addResult(editLocaObject.executeTest());
+                                numberOfTest++;
+                                break;   
+                            }
+                            
+                            case "VerifyingDownloadedExcelFiles":
+                            {
+                                VerifyingDownloadedExcelFiles editExcelFiles = new VerifyingDownloadedExcelFiles(testData);
+                                reportGenerator.addResult(editExcelFiles.executeTest());
+                                numberOfTest++;
+                                break;   
+                            }                                    
                             case "Navigate":
                             {
                                 ensureNewBrowserInstance();
