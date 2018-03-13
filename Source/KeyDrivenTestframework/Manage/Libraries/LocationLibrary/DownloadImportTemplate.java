@@ -10,6 +10,7 @@ import KeywordDrivenTestFramework.Core.BaseClass;
 import KeywordDrivenTestFramework.Entities.Enums;
 import KeywordDrivenTestFramework.Entities.TestEntity;
 import KeywordDrivenTestFramework.Entities.TestResult;
+import java.io.FileNotFoundException;
 
 /**
  *
@@ -24,7 +25,7 @@ public class DownloadImportTemplate extends BaseClass{
     public DownloadImportTemplate(TestEntity testData){
         this.testData = testData;
     }
-    public TestResult runTest() throws InterruptedException{
+    public TestResult runTest() throws InterruptedException, FileNotFoundException{
         this.setStartTime();
         CheckTemplatesLoadInfo run = new CheckTemplatesLoadInfo(testData);
         DownloadImportTemplateMethods methods = new DownloadImportTemplateMethods(testData);
@@ -59,7 +60,7 @@ public class DownloadImportTemplate extends BaseClass{
             narrator.failedMessage("Failed to click on Download button - "+errorMessage);
             return new TestResult(testData, Enums.ResultStatus.FAIL, "Failed to click on Download button", this.getTotalExecutionTime());
         }
-        pause(1000);
+        pause(10000);
         if(!methods.compareHeaders()) {
             
             SeleniumDriverInstance.takeScreenShot(counter + " - Failed to compare table headers", true);

@@ -40,7 +40,7 @@ public class AddNewTemplateTestPack {
     {
         System.out.println("Mix Telematics Test Pack");   
 
-        instance = new TestMarshall("TestPacks\\CheckingEventTemplateFilterTestPack.xlsx", Enums.BrowserType.Chrome);
+        instance = new TestMarshall("TestPacks\\AddNewTemplateTestPack.xlsx", Enums.BrowserType.Chrome);
         instance.runKeywordDrivenTests();
     }
     

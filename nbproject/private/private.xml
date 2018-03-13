@@ -2,6 +2,7 @@
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
+<<<<<<< HEAD
         <group>
             <file>file:/C:/Users/ZiyandaP/Documents/Dummy/DummyRepo/Source/KeyDrivenTestframework/Manage/Libraries/LocationLibrary/CanEditLocation.java</file>
             <file>file:/C:/Users/ZiyandaP/Documents/Dummy/DummyRepo/Source/KeywordDrivenTestFramework/Testing/TestMarshall.java</file>
@@ -12,5 +13,8 @@
             <file>file:/C:/Users/ZiyandaP/Documents/Dummy/DummyRepo/Source/KeywordDrivenTestFramework/Monitor/FleetAdmin/Assets/CheckDiagnosticWindowLoadInfo.java</file>
             <file>file:/C:/Users/ZiyandaP/Documents/Dummy/DummyRepo/Unit%20Tests/TestSuites/AddNewEventTestPack.java</file>
         </group>
+=======
+        <group/>
+>>>>>>> 3c06f9f4c7b065ecf45a00f6234ba844e4fc94a7
     </open-files>
 </project-private>
