@@ -16,6 +16,7 @@ import KeywordDrivenTestFramework.Manage.Templates.CheckingEventTemplateFilter;
 import KeywordDrivenTestFramework.Manage.Templates.CheckTemplatesLoadInfoZee;
 import KeywordDrivenTestFramework.Manage.Libraries.AddingNewEventToSystem;
 import KeyDrivenTestframework.Manage.Libraries.LocationLibrary.CanEditLocation;
+import KeyDrivenTestframework.Monitor.Assets.CreateNewAsset;
 import KeywordDrivenTestFramework.Monitor.FleetAdmin.Assets.VerifyingDownloadedExcelFiles;
 import KeywordDrivenTestFramework.Reporting.Narrator;
 import KeywordDrivenTestFramework.Reporting.ReportGenerator;
@@ -221,7 +222,13 @@ public class TestMarshall extends BaseClass
                                 numberOfTest++;
                                 break;
                             } 
-                            
+                             case "CreateNewAsset":
+                            {
+                                CreateNewAsset newAsset = new  CreateNewAsset(testData);
+                                reportGenerator.addResult(newAsset.runTest());
+                                numberOfTest++;
+                                break;
+                            } 
                             case "ExportDiagnosticsInformation":
                             {
                                 ExportDiagnosticsInformation exportDiagnosticInfo = new ExportDiagnosticsInformation(testData);
