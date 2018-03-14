@@ -4,6 +4,7 @@ import KeyDrivenTestframework.Manage.Libraries.LocationLibrary.DownloadImportTem
 import KeyDrivenTestframework.Manage.Templates.CheckTemplatesLoadInfo;
 import KeyDrivenTestframework.Manage.Templates.EventTemplates.AddNewEventTemplate;
 import KeyDrivenTestframework.Manage.Templates.EventTemplates.CheckEventTemplatesFilter;
+import KeyDrivenTestframework.Monitor.Assets.CheckDiagnosticWindow;
 import KeywordDrivenTestFramework.Core.BaseClass;
 import static KeywordDrivenTestFramework.Core.BaseClass.narrator;
 import KeywordDrivenTestFramework.Entities.Enums;
@@ -212,7 +213,14 @@ public class TestMarshall extends BaseClass
                                 reportGenerator.addResult(checkEventTemplate.executeTest());
                                 numberOfTest++;
                                 break;
-                            }                            
+                            }  
+                            case "CheckDiagnosticWindow":
+                            {
+                                CheckDiagnosticWindow checkDiagnosticWindow = new  CheckDiagnosticWindow(testData);
+                                reportGenerator.addResult(checkDiagnosticWindow.runTest());
+                                numberOfTest++;
+                                break;
+                            } 
                             
                             case "ExportDiagnosticsInformation":
                             {
