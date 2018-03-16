@@ -4,6 +4,7 @@ import KeyDrivenTestframework.Manage.Libraries.LocationLibrary.DownloadImportTem
 import KeyDrivenTestframework.Manage.Templates.CheckTemplatesLoadInfo;
 import KeyDrivenTestframework.Manage.Templates.EventTemplates.AddNewEventTemplate;
 import KeyDrivenTestframework.Manage.Templates.EventTemplates.CheckEventTemplatesFilter;
+import KeyDrivenTestframework.Monitor.Assets.CheckDiagnosticWindow;
 import KeywordDrivenTestFramework.Core.BaseClass;
 import static KeywordDrivenTestFramework.Core.BaseClass.narrator;
 import KeywordDrivenTestFramework.Entities.Enums;
@@ -15,6 +16,7 @@ import KeywordDrivenTestFramework.Manage.Templates.CheckingEventTemplateFilter;
 import KeywordDrivenTestFramework.Manage.Templates.CheckTemplatesLoadInfoZee;
 import KeywordDrivenTestFramework.Manage.Libraries.AddingNewEventToSystem;
 import KeyDrivenTestframework.Manage.Libraries.LocationLibrary.CanEditLocation;
+import KeyDrivenTestframework.Monitor.Assets.CreateNewAsset;
 import KeywordDrivenTestFramework.Monitor.FleetAdmin.Assets.VerifyingDownloadedExcelFiles;
 import KeywordDrivenTestFramework.Reporting.Narrator;
 import KeywordDrivenTestFramework.Reporting.ReportGenerator;
@@ -212,8 +214,21 @@ public class TestMarshall extends BaseClass
                                 reportGenerator.addResult(checkEventTemplate.executeTest());
                                 numberOfTest++;
                                 break;
-                            }                            
-                            
+                            }  
+                            case "CheckDiagnosticWindow":
+                            {
+                                CheckDiagnosticWindow checkDiagnosticWindow = new  CheckDiagnosticWindow(testData);
+                                reportGenerator.addResult(checkDiagnosticWindow.runTest());
+                                numberOfTest++;
+                                break;
+                            } 
+                             case "CreateNewAsset":
+                            {
+                                CreateNewAsset newAsset = new  CreateNewAsset(testData);
+                                reportGenerator.addResult(newAsset.runTest());
+                                numberOfTest++;
+                                break;
+                            } 
                             case "ExportDiagnosticsInformation":
                             {
                                 ExportDiagnosticsInformation exportDiagnosticInfo = new ExportDiagnosticsInformation(testData);
