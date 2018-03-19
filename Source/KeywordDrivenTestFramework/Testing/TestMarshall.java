@@ -42,6 +42,7 @@ import KeywordDrivenTestFramework.Testing.TestClasses.Login.Login_to_MixTelemati
 import KeywordDrivenTestFramework.Testing.TestClasses.Login.Navigate;
 import KeywordDrivenTestFramework.Monitor.FleetAdmin.Assets.CheckDiagnosticWindowLoadInfo;
 import KeywordDrivenTestFramework.Monitor.FleetAdmin.Assets.ExportDiagnosticsInformation;
+import KeywordDrivenTestFramework.Monitor.FleetAdmin.Drivers.CanAddDriver;
 
 
 /**
@@ -222,13 +223,21 @@ public class TestMarshall extends BaseClass
                                 numberOfTest++;
                                 break;
                             } 
+
                              case "CreateNewAsset":
                             {
                                 CreateNewAsset newAsset = new  CreateNewAsset(testData);
                                 reportGenerator.addResult(newAsset.runTest());
                                 numberOfTest++;
                                 break;
-                            } 
+                            }
+                             case "CanAddDriver":
+                            {
+                                CanAddDriver newDriver = new  CanAddDriver(testData);
+                                reportGenerator.addResult(newDriver.executeTest());
+                                numberOfTest++;
+                                break;
+                            }                            
                             case "ExportDiagnosticsInformation":
                             {
                                 ExportDiagnosticsInformation exportDiagnosticInfo = new ExportDiagnosticsInformation(testData);

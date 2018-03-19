@@ -24,7 +24,7 @@ import org.apache.commons.io.filefilter.WildcardFileFilter;
 
 /**
  *
- * @author NicholasM
+ * @author ZiyandaP
  */
 public class ExcelReference extends BaseClass
 {
