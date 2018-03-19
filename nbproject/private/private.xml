@@ -3,10 +3,17 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
+<<<<<<< HEAD
             <file>file:/C:/Users/phathuxoloj/Documents/projects/DummyRepo/Source/KeyDrivenTestframework/Monitor/Assets/ImportAsset.java</file>
             <file>file:/C:/Users/phathuxoloj/Documents/projects/DummyRepo/Source/KeyDrivenTestframework/Monitor/Assets/DiagnosticWindowMethods.java</file>
             <file>file:/C:/Users/phathuxoloj/Documents/projects/DummyRepo/Source/KeyDrivenTestframework/Monitor/Assets/ImportAssetMethods.java</file>
             <file>file:/C:/Users/phathuxoloj/Documents/projects/DummyRepo/Unit%20Tests/TestSuites/ImportAssetTestPack.java</file>
+=======
+            <file>file:/C:/Users/ZiyandaP/Documents/Dummy/DummyRepo/Source/KeywordDrivenTestFramework/Monitor/FleetAdmin/Assets/VerifyingDownloadedExcelFiles.java</file>
+            <file>file:/C:/Users/ZiyandaP/Documents/Dummy/DummyRepo/Source/KeywordDrivenTestFramework/Monitor/FleetAdmin/Drivers/CanAddDriver.java</file>
+            <file>file:/C:/Users/ZiyandaP/Documents/Dummy/DummyRepo/Source/KeyDrivenTestframework/Manage/Libraries/LocationLibrary/CanEditLocation.java</file>
+            <file>file:/C:/Users/ZiyandaP/Documents/Dummy/DummyRepo/Unit%20Tests/TestSuites/CanAddADriverTestPack.java</file>
+>>>>>>> master
         </group>
     </open-files>
 </project-private>

@@ -190,7 +190,7 @@ public CanEditLocation(TestEntity testData){
         }
         
         SeleniumDriverInstance.EnterTextByXpath("//input[@placeholder='Filter']", textToEnter);
-        SeleniumDriverInstance.takeScreenShot(counter + "- Text addded successfully -", false);
+        SeleniumDriverInstance.takeScreenShot(counter + "- Text added successfully -", false);
         counter++;
         return true;
     }
