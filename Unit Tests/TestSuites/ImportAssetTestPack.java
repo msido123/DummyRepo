@@ -29,7 +29,7 @@ public class ImportAssetTestPack{
     public void RunMixTelematicsImportAssetTestPackIE() throws FileNotFoundException
     {
         System.out.println("Mix Telematics Test Pack");   
-        instance = new TestMarshall("TestPacks\\NavigateAndEditLocationTestPack.xls", Enums.BrowserType.IE);
+        instance = new TestMarshall("TestPacks\\ImportAssetTestPack.xls", Enums.BrowserType.IE);
         instance.runKeywordDrivenTests();
     }
  
@@ -37,7 +37,7 @@ public class ImportAssetTestPack{
     public void RunMixTelematicsImportAssetTestPackChrome() throws FileNotFoundException
     {
         System.out.println("Mix Telematics Test Pack");   
-        instance = new TestMarshall("TestPacks\\FleetAdminRegressionPack.xlsx", Enums.BrowserType.Chrome);
+        instance = new TestMarshall("TestPacks\\ImportAssetTestPack.xlsx", Enums.BrowserType.Chrome);
         instance.runKeywordDrivenTests();
     }
     
@@ -45,7 +45,7 @@ public class ImportAssetTestPack{
     public void RunMixTelematicsImportAssetTestPackFireFox() throws FileNotFoundException
     {
         System.out.println("Mix Telematics Test Pack");   
-        instance = new TestMarshall("TestPacks\\NavigateAndEditLocationTestPack.xlsx", Enums.BrowserType.FireFox);
+        instance = new TestMarshall("TestPacks\\ImportAssetTestPack.xlsx", Enums.BrowserType.FireFox);
         instance.runKeywordDrivenTests();
     }
     
