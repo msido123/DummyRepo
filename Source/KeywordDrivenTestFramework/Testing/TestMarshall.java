@@ -17,6 +17,7 @@ import KeywordDrivenTestFramework.Manage.Templates.CheckTemplatesLoadInfoZee;
 import KeywordDrivenTestFramework.Manage.Libraries.AddingNewEventToSystem;
 import KeyDrivenTestframework.Manage.Libraries.LocationLibrary.CanEditLocation;
 import KeyDrivenTestframework.Monitor.Assets.CreateNewAsset;
+import KeyDrivenTestframework.Monitor.Assets.ImportAsset;
 import KeywordDrivenTestFramework.Monitor.FleetAdmin.Assets.VerifyingDownloadedExcelFiles;
 import KeywordDrivenTestFramework.Reporting.Narrator;
 import KeywordDrivenTestFramework.Reporting.ReportGenerator;
@@ -231,6 +232,15 @@ public class TestMarshall extends BaseClass
                                 numberOfTest++;
                                 break;
                             }
+<<<<<<< HEAD
+                            case "ImportAsset":
+                            {
+                                ImportAsset assetFile = new  ImportAsset(testData);
+                                reportGenerator.addResult(assetFile.runTest());
+                                numberOfTest++;
+                                break;
+                            }
+=======
                              case "CanAddDriver":
                             {
                                 CanAddDriver newDriver = new CanAddDriver(testData);
@@ -238,6 +248,7 @@ public class TestMarshall extends BaseClass
                                 numberOfTest++;
                                 break;
                             }                            
+>>>>>>> master
                             case "ExportDiagnosticsInformation":
                             {
                                 ExportDiagnosticsInformation exportDiagnosticInfo = new ExportDiagnosticsInformation(testData);
