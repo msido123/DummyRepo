@@ -22,7 +22,7 @@ public class CanAddADriverTestPack {
     {
         ApplicationConfig appConfig = new ApplicationConfig();
         
-        TestMarshall.currentEnvironment = Enums.Environment.UAT;  
+        TestMarshall.currentEnvironment = Enums.Environment.INT;  
     }
      
     @Test

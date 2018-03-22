@@ -357,13 +357,13 @@ public class AddingNewEventToSystem  extends BaseClass{
         return true;
     }
     public boolean isRemoveClicked(){
-    if(!SeleniumDriverInstance.waitForElementByXpath("//i[@class=\"icon icon-remove-sign icon-red\"]")) {
+    if(!SeleniumDriverInstance.waitForElementByXpath("//a[@event='Remove'][1] | //i[@class='icon-remove-sign icon-red']")) {
             
-            errorMsg = "Failed to click OK";
+            errorMsg = "Failed to click Remove";
             return false;
         }
-        SeleniumDriverInstance.clickElementByXpath("//i[@class=\"icon icon-remove-sign icon-red\"]");
-        SeleniumDriverInstance.takeScreenShot(counter + "-Successfully clicked OK -", false);      
+        SeleniumDriverInstance.clickElementByXpath("//a[@event='Remove'][1] | //i[@class='icon-remove-sign icon-red']");
+        SeleniumDriverInstance.takeScreenShot(counter + "-Successfully clicked Remove-", false);      
         counter++;
         return true;
     }

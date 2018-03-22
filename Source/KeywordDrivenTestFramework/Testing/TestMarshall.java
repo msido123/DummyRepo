@@ -233,7 +233,7 @@ public class TestMarshall extends BaseClass
                             }
                              case "CanAddDriver":
                             {
-                                CanAddDriver newDriver = new  CanAddDriver(testData);
+                                CanAddDriver newDriver = new CanAddDriver(testData);
                                 reportGenerator.addResult(newDriver.executeTest());
                                 numberOfTest++;
                                 break;
