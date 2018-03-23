@@ -18,7 +18,11 @@ import KeywordDrivenTestFramework.Manage.Libraries.AddingNewEventToSystem;
 import KeyDrivenTestframework.Manage.Libraries.LocationLibrary.CanEditLocation;
 import KeyDrivenTestframework.Monitor.Assets.CreateNewAsset;
 import KeyDrivenTestframework.Monitor.Assets.ImportAsset;
+<<<<<<< HEAD
 import KeywordDrivenTestFramework.Manage.Contacts.ManageContacts.ImportContactExecuteTestClass;
+=======
+import KeyDrivenTestframework.Monitor.FleetAdmin.OrganizationGroups.AddOrEditSite;
+>>>>>>> 0bbb698b082faa628a65cf8a27691fff17a72374
 import KeywordDrivenTestFramework.Monitor.FleetAdmin.Assets.VerifyingDownloadedExcelFiles;
 import KeywordDrivenTestFramework.Reporting.Narrator;
 import KeywordDrivenTestFramework.Reporting.ReportGenerator;
@@ -233,7 +237,10 @@ public class TestMarshall extends BaseClass
                                 numberOfTest++;
                                 break;
                             }
+<<<<<<< HEAD
 
+=======
+>>>>>>> 0bbb698b082faa628a65cf8a27691fff17a72374
                             case "ImportAsset":
                             {
                                 ImportAsset assetFile = new  ImportAsset(testData);
@@ -241,7 +248,17 @@ public class TestMarshall extends BaseClass
                                 numberOfTest++;
                                 break;
                             }
+<<<<<<< HEAD
 
+=======
+                            case "AddOrEditANewSite":
+                            {
+                                AddOrEditSite site = new  AddOrEditSite(testData);
+                                reportGenerator.addResult(site.runTest());
+                                numberOfTest++;
+                                break;
+                            }
+>>>>>>> 0bbb698b082faa628a65cf8a27691fff17a72374
                              case "CanAddDriver":
                             {
                                 CanAddDriver newDriver = new CanAddDriver(testData);
@@ -249,7 +266,10 @@ public class TestMarshall extends BaseClass
                                 numberOfTest++;
                                 break;
                             }                            
+<<<<<<< HEAD
 
+=======
+>>>>>>> 0bbb698b082faa628a65cf8a27691fff17a72374
                             case "ExportDiagnosticsInformation":
                             {
                                 ExportDiagnosticsInformation exportDiagnosticInfo = new ExportDiagnosticsInformation(testData);
