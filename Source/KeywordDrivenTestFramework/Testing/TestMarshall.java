@@ -18,6 +18,7 @@ import KeywordDrivenTestFramework.Manage.Libraries.AddingNewEventToSystem;
 import KeyDrivenTestframework.Manage.Libraries.LocationLibrary.CanEditLocation;
 import KeyDrivenTestframework.Monitor.Assets.CreateNewAsset;
 import KeyDrivenTestframework.Monitor.Assets.ImportAsset;
+import KeywordDrivenTestFramework.Manage.Contacts.ManageContacts.ImportContactExecuteTestClass;
 import KeywordDrivenTestFramework.Monitor.FleetAdmin.Assets.VerifyingDownloadedExcelFiles;
 import KeywordDrivenTestFramework.Reporting.Narrator;
 import KeywordDrivenTestFramework.Reporting.ReportGenerator;
@@ -232,7 +233,7 @@ public class TestMarshall extends BaseClass
                                 numberOfTest++;
                                 break;
                             }
-<<<<<<< HEAD
+
                             case "ImportAsset":
                             {
                                 ImportAsset assetFile = new  ImportAsset(testData);
@@ -240,7 +241,7 @@ public class TestMarshall extends BaseClass
                                 numberOfTest++;
                                 break;
                             }
-=======
+
                              case "CanAddDriver":
                             {
                                 CanAddDriver newDriver = new CanAddDriver(testData);
@@ -248,7 +249,7 @@ public class TestMarshall extends BaseClass
                                 numberOfTest++;
                                 break;
                             }                            
->>>>>>> master
+
                             case "ExportDiagnosticsInformation":
                             {
                                 ExportDiagnosticsInformation exportDiagnosticInfo = new ExportDiagnosticsInformation(testData);
@@ -264,12 +265,21 @@ public class TestMarshall extends BaseClass
                                 break;
                           
                             }
+                            
                             case "CanEditLocation":
                             {
                                 CanEditLocation editLocaObject = new CanEditLocation(testData);
                                 reportGenerator.addResult(editLocaObject.executeTest());
                                 numberOfTest++;
                                 break;   
+                            }
+                            case "ImportContact":
+                            {
+                                ImportContactExecuteTestClass importObject = new ImportContactExecuteTestClass(testData);
+                                reportGenerator.addResult(importObject.executingTest());
+                                numberOfTest++;
+                                break;
+                          
                             }
                             
                             case "VerifyingDownloadedExcelFiles":
